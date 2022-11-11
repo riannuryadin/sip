@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; SIP-PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="../assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="css/custom.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time text-primary">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="far fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Rutin)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Laporan HPK/SLO/SKP SLO</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="hpk_slo_skp.html"> Lihat Penerbitan SLO</a></li>
+                <li class="mb-4"><a class="nav-link" href="rekap_hpk_slo.html">Lihat Rekapitulasi SLO</a></liclas>
+                <li class="mb-5"><a class="nav-link" href="rekap_kk.html">Lihat Rekapitulasi Keberangkatan dan Kedatangan Kapal</a></li>
+                <li><a class="nav-link" href="frek_hpk_slo.html">Lihat Frekuensi kapal</a></li>
+              </ul>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
+                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+              </ul>
+            </li>
+          </ul>  
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Laporan Rekapitulasi Keberangkatan Dan Kedatangan Kapal perikanan izin Pusat dan Daerah</h1>
+          </div>
+      
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="card">
+                    <div class="card-body">
+                      <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="keberangkatan-tab" data-toggle="tab" href="#keberangkatan" role="tab" aria-controls="" aria-selected="true">Keberangkatan</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="kedatangan-tab" data-toggle="tab" href="#kedatangan" role="tab" aria-controls="Kedatangan" aria-selected="false">Kedatangan</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content tab-bordered" id="myTab3Content">
+                        <div class="tab-pane fade show active" id="keberangkatan" role="tabpanel" aria-labelledby="keberangkatan-tab">
+                            <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
+                              <h6 class="m-3">Filter Data</h6>
+                              <div class="form-row form-group m-3">
+                                <div class="col col-sm">
+                                  <label>UPT</label>
+                                      <select class="form-control form-control-sm select2" style="width:100%">
+                                        <option></option>
+                                        <option>Pangkalan PSDKP Lampulo</option>
+                                        <option>Pangkalan PSDKP Batam</option>
+                                        <option>Pangkalan PSDKP Jakarta</option>
+                                        <option>Pangkalan PSDKP Benoa</option>
+                                        <option>Pangkalan PSDKP Bitung</option>
+                                        <option>Pangkalan PSDKP Tual</option>
+                                        <option>Stasiun PSDKP Cilacap</option>
+                                        <option>Stasiun PSDKP Belawan</option>
+                                        <option>Stasiun PSDKP Kupang</option>
+                                        <option>Stasiun PSDKP Pontianak</option>
+                                        <option>Stasiun PSDKP Tarakan</option>
+                                        <option>Stasiun PSDKP Tahuna</option>
+                                        <option>Stasiun PSDKP Ambon</option>
+                                        <option>Stasiun PSDKP Biak</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Satuan Pengawasan</label>
+                                      <select class="form-control form-control-sm select2" style="width:100%">
+                                        <option></option>
+                                          <option>Aceh Barat</option>
+                                          <option>Simeulue</option>
+                                          <option>Padang</option>
+                                          <option>Sibolga</option>
+                                          <option>Bengkulu</option>
+                                          <option>Palembang</option>
+                                          <option>Tanjung Jabung Barat</option>
+                                          <option>Natuna</option>
+                                          <option>Bangka</option>
+                                          <option>Kepulauan Anambas</option>
+                                          <option>Belitung</option>
+                                          <option>Tanjung Pinang</option>
+                                          <option>Pandeglang</option>
+                                          <option>Serang</option>
+                                          <option>Pesawaran</option>
+                                          <option>Cirebon</option>
+                                          <option>Sukabumi</option>
+                                          <option>Jembrana</option>
+                                          <option>Lombok Timur</option>
+                                          <option>Banyuwangi</option>
+                                          <option>Probolinggo</option>
+                                          <option>Surabaya</option>
+                                          <option>Lamongan</option>
+                                          <option>Gorontalo Utara</option>
+                                          <option>Gorontalo</option>
+                                          <option>Kendari</option>
+                                          <option>Makassar</option>
+                                          <option>Takalar</option>
+                                          <option>Mamuju</option>
+                                          <option>Merauke</option>
+                                          <option>Mimika</option>
+                                          <option>Maluku Tenggara Barat</option>
+                                          <option>Sorong</option>
+                                          <option>Kaimana</option>
+                                          <option>Pati</option>
+                                          <option>Pekalongan</option>
+                                          <option>Trenggalek</option>
+                                          <option>Malang</option>
+                                          <option>Rokan Hilir</option>
+                                          <option>Langsa</option>
+                                          <option>Asahan</option>
+                                          <option>Flores Timur</option>
+                                          <option>Sumba Timur</option>
+                                          <option>Sambas</option>
+                                          <option>Kayong Utara</option>
+                                          <option>Kotawaringin Barat</option>
+                                          <option>Nunukan</option>
+                                          <option>Balikpapan</option>
+                                          <option>Banjarmasin</option>
+                                          <option>Kotabaru</option>
+                                          <option>Kepulauan Talaud</option>
+                                          <option>Seram Bagian Timur</option>
+                                          <option>Halmahera Selatan</option>
+                                          <option>Ternate</option>
+                                          <option>Morotai</option>
+                                          <option>Jayapura</option>
+                                          <option>Manokwari</option>
+                                          <option>Nabire</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Bulan</label>
+                                      <select class="form-control select2" style="width:100%">
+                                        <option>April</option>
+                                        <option>Januari</option>
+                                        <option>Februari</option>
+                                        <option>Maret</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Tahun</label>
+                                      <select class="form-control select2" style="width:100%;">
+                                        <option>2022</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                      </select>
+                                </div>
+                              </div>
+                              <div class="form-row form-group m-3">
+                                <div class="col col-sm">
+                                  <input type="text" class="form-control" placeholder="cari nama kapal/nama perusahaan/GT/Jenis Kapal">
+                                </div>
+                                <div class="col col-sm">
+                                  <button class="btn btn-primary">Tampilan</button>
+                                </div>
+                              </div>
+                                <!-- <div class="row m-3">
+                                  <div class="col-3 col-md-3 col-lg-3 col-sm-12">
+                                    <form>
+                                    <div class="form-group">
+                                      <label>UPT</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                        <option>Pangkalan PSDKP Lampulo</option>
+                                        <option>Pangkalan PSDKP Batam</option>
+                                        <option>Pangkalan PSDKP Jakarta</option>
+                                        <option>Pangkalan PSDKP Benoa</option>
+                                        <option>Pangkalan PSDKP Bitung</option>
+                                        <option>Pangkalan PSDKP Tual</option>
+                                        <option>Stasiun PSDKP Cilacap</option>
+                                        <option>Stasiun PSDKP Belawan</option>
+                                        <option>Stasiun PSDKP Kupang</option>
+                                        <option>Stasiun PSDKP Pontianak</option>
+                                        <option>Stasiun PSDKP Tarakan</option>
+                                        <option>Stasiun PSDKP Tahuna</option>
+                                        <option>Stasiun PSDKP Ambon</option>
+                                        <option>Stasiun PSDKP Biak</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>GT</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                        <option> <=30 GT </option>
+                                        <option> > 30 GT</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Aksi</label><br>
+                                      <button class="btn btn-primary">Tampilkan</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 col-md-3 col-lg-3 col-sm-12">
+                                    <div class="form-group">
+                                      <label>Satuan Pengawasan</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                          <option>Aceh Barat</option>
+                                          <option>Simeulue</option>
+                                          <option>Padang</option>
+                                          <option>Sibolga</option>
+                                          <option>Bengkulu</option>
+                                          <option>Palembang</option>
+                                          <option>Tanjung Jabung Barat</option>
+                                          <option>Natuna</option>
+                                          <option>Bangka</option>
+                                          <option>Kepulauan Anambas</option>
+                                          <option>Belitung</option>
+                                          <option>Tanjung Pinang</option>
+                                          <option>Pandeglang</option>
+                                          <option>Serang</option>
+                                          <option>Pesawaran</option>
+                                          <option>Cirebon</option>
+                                          <option>Sukabumi</option>
+                                          <option>Jembrana</option>
+                                          <option>Lombok Timur</option>
+                                          <option>Banyuwangi</option>
+                                          <option>Probolinggo</option>
+                                          <option>Surabaya</option>
+                                          <option>Lamongan</option>
+                                          <option>Gorontalo Utara</option>
+                                          <option>Gorontalo</option>
+                                          <option>Kendari</option>
+                                          <option>Makassar</option>
+                                          <option>Takalar</option>
+                                          <option>Mamuju</option>
+                                          <option>Merauke</option>
+                                          <option>Mimika</option>
+                                          <option>Maluku Tenggara Barat</option>
+                                          <option>Sorong</option>
+                                          <option>Kaimana</option>
+                                          <option>Pati</option>
+                                          <option>Pekalongan</option>
+                                          <option>Trenggalek</option>
+                                          <option>Malang</option>
+                                          <option>Rokan Hilir</option>
+                                          <option>Langsa</option>
+                                          <option>Asahan</option>
+                                          <option>Flores Timur</option>
+                                          <option>Sumba Timur</option>
+                                          <option>Sambas</option>
+                                          <option>Kayong Utara</option>
+                                          <option>Kotawaringin Barat</option>
+                                          <option>Nunukan</option>
+                                          <option>Balikpapan</option>
+                                          <option>Banjarmasin</option>
+                                          <option>Kotabaru</option>
+                                          <option>Kepulauan Talaud</option>
+                                          <option>Seram Bagian Timur</option>
+                                          <option>Halmahera Selatan</option>
+                                          <option>Ternate</option>
+                                          <option>Morotai</option>
+                                          <option>Jayapura</option>
+                                          <option>Manokwari</option>
+                                          <option>Nabire</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Jenis Kapal</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 col-md-3 col-lg-3 col-sm-12">
+                                    <div class="form-group">
+                                      <label>Bulan</label>
+                                      <select class="form-control select2">
+                                        <option>April</option>
+                                        <option>Januari</div>
+                                        <option>Februari</option>
+                                        <option>Maret</option>
+                                      </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Alat Penangkap Ikan(API)</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 col-md-3 col-lg-3 col-sm-12">
+                                    <div class="form-group">
+                                      <label>Tahun</label>
+                                      <select class="form-control select2">
+                                        <option>2022</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                      </select>
+                                      
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Laik/Tidak Laik/Docking</label>
+                                      <select class="form-control select2">
+                                        <option></option>
+                                        <option>Laik</option>
+                                        <option>Tidak Laik</option>
+                                        <option>Docking</option>
+                                      </select>
+                                    </div>
+                                  </form>
+                                </div> -->
+                              <!-- </div> -->
+                              </div>
+                      
+                                <div class="btn-group">
+                                  <a href="file/Laporan Rekapitulasi Keberangkatan Kapal perikanan izin Pusat dan Daerah.xlsx"><button class="btn btn-sm btn-outline-success m-1">export ke excel</button></a>
+                                  <button class="btn btn-sm btn-outline-success m-1">export ke csv</button>
+                                  <a href="file/Laporan Rekapitulasi Keberangkatan Kapal perikanan izin Pusat dan Daerah.pdf" target="_blank"><button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf" aria-hidden="true"></i> cetak pdf</button></a>
+                                </div>
+                          <div class="table-responsive">
+                            <table class="table table-bordered table-md">
+                              <tr>
+                                <th>Nama Kapal</th>
+                                <th>GT</th>
+                                <th> Jenis Kapal</th>
+                                <th>Nama Perusahaan/Pemilik</th>
+                                <th>Pelabuhan Pangkalan</th>
+                                <th>DPI/ Pelabuhan Tujuan</th>
+                                <th>API</th>
+                                <th>No SIPI/SIKPI/BPKP</th>
+                                <th>Tgl berakhir SIPI/SIKPI/BPKP</th>
+                                <th>Kuota tangkapan ikan</th>
+                                <th>Total Muatan Hasil tangkapan/Ikan yang diangkut</th>
+                                <th>Sisa Kuota</th>
+                                <th>No. ID Transmiter</th>
+                                <th>Tanggal berakhir SKAT</th>
+                                <th>Tgl HPK-b</th>
+                                <th>No HPK-b</th>
+                                <th>Tgl SLO/SKP SLO</th>
+                                <th>No. Reg</th>
+                                <th>No.SLO/SKP SLO</th>
+                                <th>Laik/Tidak Laik/Docking</th>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="kedatangan" role="tabpanel" aria-labelledby="kedatangan-tab">
+                            <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
+                              <h6 class="m-3">Filter Data</h6>
+                              <div class="form-row form-group m-3">
+                                <div class="col col-sm">
+                                  <label>UPT</label>
+                                      <select class="form-control form-control-sm select2" style="width:100%">
+                                        <option></option>
+                                        <option>Pangkalan PSDKP Lampulo</option>
+                                        <option>Pangkalan PSDKP Batam</option>
+                                        <option>Pangkalan PSDKP Jakarta</option>
+                                        <option>Pangkalan PSDKP Benoa</option>
+                                        <option>Pangkalan PSDKP Bitung</option>
+                                        <option>Pangkalan PSDKP Tual</option>
+                                        <option>Stasiun PSDKP Cilacap</option>
+                                        <option>Stasiun PSDKP Belawan</option>
+                                        <option>Stasiun PSDKP Kupang</option>
+                                        <option>Stasiun PSDKP Pontianak</option>
+                                        <option>Stasiun PSDKP Tarakan</option>
+                                        <option>Stasiun PSDKP Tahuna</option>
+                                        <option>Stasiun PSDKP Ambon</option>
+                                        <option>Stasiun PSDKP Biak</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Satuan Pengawasan</label>
+                                      <select class="form-control form-control-sm select2" style="width:100%">
+                                        <option></option>
+                                          <option>Aceh Barat</option>
+                                          <option>Simeulue</option>
+                                          <option>Padang</option>
+                                          <option>Sibolga</option>
+                                          <option>Bengkulu</option>
+                                          <option>Palembang</option>
+                                          <option>Tanjung Jabung Barat</option>
+                                          <option>Natuna</option>
+                                          <option>Bangka</option>
+                                          <option>Kepulauan Anambas</option>
+                                          <option>Belitung</option>
+                                          <option>Tanjung Pinang</option>
+                                          <option>Pandeglang</option>
+                                          <option>Serang</option>
+                                          <option>Pesawaran</option>
+                                          <option>Cirebon</option>
+                                          <option>Sukabumi</option>
+                                          <option>Jembrana</option>
+                                          <option>Lombok Timur</option>
+                                          <option>Banyuwangi</option>
+                                          <option>Probolinggo</option>
+                                          <option>Surabaya</option>
+                                          <option>Lamongan</option>
+                                          <option>Gorontalo Utara</option>
+                                          <option>Gorontalo</option>
+                                          <option>Kendari</option>
+                                          <option>Makassar</option>
+                                          <option>Takalar</option>
+                                          <option>Mamuju</option>
+                                          <option>Merauke</option>
+                                          <option>Mimika</option>
+                                          <option>Maluku Tenggara Barat</option>
+                                          <option>Sorong</option>
+                                          <option>Kaimana</option>
+                                          <option>Pati</option>
+                                          <option>Pekalongan</option>
+                                          <option>Trenggalek</option>
+                                          <option>Malang</option>
+                                          <option>Rokan Hilir</option>
+                                          <option>Langsa</option>
+                                          <option>Asahan</option>
+                                          <option>Flores Timur</option>
+                                          <option>Sumba Timur</option>
+                                          <option>Sambas</option>
+                                          <option>Kayong Utara</option>
+                                          <option>Kotawaringin Barat</option>
+                                          <option>Nunukan</option>
+                                          <option>Balikpapan</option>
+                                          <option>Banjarmasin</option>
+                                          <option>Kotabaru</option>
+                                          <option>Kepulauan Talaud</option>
+                                          <option>Seram Bagian Timur</option>
+                                          <option>Halmahera Selatan</option>
+                                          <option>Ternate</option>
+                                          <option>Morotai</option>
+                                          <option>Jayapura</option>
+                                          <option>Manokwari</option>
+                                          <option>Nabire</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Bulan</label>
+                                      <select class="form-control select2" style="width:100%">
+                                        <option>April</option>
+                                        <option>Januari</option>
+                                        <option>Februari</option>
+                                        <option>Maret</option>
+                                      </select>
+                                </div>
+                                <div class="col col-sm">
+                                  <label>Tahun</label>
+                                      <select class="form-control select2" style="width:100%;">
+                                        <option>2022</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                      </select>
+                                </div>
+                              </div>
+                              <div class="form-row form-group m-3">
+                                <div class="col col-sm">
+                                  <input type="text" class="form-control" placeholder="cari nama kapal/nama perusahaan/GT/Jenis Kapal">
+                                </div>
+                                <div class="col col-sm">
+                                  <button class="btn btn-primary">Tampilan</button>
+                                </div>
+                              </div>
+                                <!-- <div class="row m-3">
+                                  <div class="col-3 col-md-3 col-lg-3">
+                                    <form>
+                                      <div class="form-group">
+                                        <label>UPT</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option></option>
+                                          <option>Pangkalan PSDKP Lampulo</option>
+                                          <option>Pangkalan PSDKP Batam</option>
+                                          <option>Pangkalan PSDKP Jakarta</option>
+                                          <option>Pangkalan PSDKP Benoa</option>
+                                          <option>Pangkalan PSDKP Bitung</option>
+                                          <option>Pangkalan PSDKP Tual</option>
+                                          <option>Stasiun PSDKP Cilacap</option>
+                                          <option>Stasiun PSDKP Belawan</option>
+                                          <option>Stasiun PSDKP Kupang</option>
+                                          <option>Stasiun PSDKP Pontianak</option>
+                                          <option>Stasiun PSDKP Tarakan</option>
+                                          <option>Stasiun PSDKP Tahuna</option>
+                                          <option>Stasiun PSDKP Ambon</option>
+                                          <option>Stasiun PSDKP Biak</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>GT</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option></option>
+                                          <option> <=30 GT </option>
+                                          <option> > 30 GT</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" class="form-control">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label>Aksi</label><br>
+                                        <button class="btn btn-primary">Tampilkan</button>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 col-md-3 col-lg-3 col-sm-12">
+                                      <div class="form-group">
+                                        <label>Satuan Pengawasan</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option></option>
+                                            <option>Aceh Barat</option>
+                                            <option>Simeulue</option>
+                                            <option>Padang</option>
+                                            <option>Sibolga</option>
+                                            <option>Bengkulu</option>
+                                            <option>Palembang</option>
+                                            <option>Tanjung Jabung Barat</option>
+                                            <option>Natuna</option>
+                                            <option>Bangka</option>
+                                            <option>Kepulauan Anambas</option>
+                                            <option>Belitung</option>
+                                            <option>Tanjung Pinang</option>
+                                            <option>Pandeglang</option>
+                                            <option>Serang</option>
+                                            <option>Pesawaran</option>
+                                            <option>Cirebon</option>
+                                            <option>Sukabumi</option>
+                                            <option>Jembrana</option>
+                                            <option>Lombok Timur</option>
+                                            <option>Banyuwangi</option>
+                                            <option>Probolinggo</option>
+                                            <option>Surabaya</option>
+                                            <option>Lamongan</option>
+                                            <option>Gorontalo Utara</option>
+                                            <option>Gorontalo</option>
+                                            <option>Kendari</option>
+                                            <option>Makassar</option>
+                                            <option>Takalar</option>
+                                            <option>Mamuju</option>
+                                            <option>Merauke</option>
+                                            <option>Mimika</option>
+                                            <option>Maluku Tenggara Barat</option>
+                                            <option>Sorong</option>
+                                            <option>Kaimana</option>
+                                            <option>Pati</option>
+                                            <option>Pekalongan</option>
+                                            <option>Trenggalek</option>
+                                            <option>Malang</option>
+                                            <option>Rokan Hilir</option>
+                                            <option>Langsa</option>
+                                            <option>Asahan</option>
+                                            <option>Flores Timur</option>
+                                            <option>Sumba Timur</option>
+                                            <option>Sambas</option>
+                                            <option>Kayong Utara</option>
+                                            <option>Kotawaringin Barat</option>
+                                            <option>Nunukan</option>
+                                            <option>Balikpapan</option>
+                                            <option>Banjarmasin</option>
+                                            <option>Kotabaru</option>
+                                            <option>Kepulauan Talaud</option>
+                                            <option>Seram Bagian Timur</option>
+                                            <option>Halmahera Selatan</option>
+                                            <option>Ternate</option>
+                                            <option>Morotai</option>
+                                            <option>Jayapura</option>
+                                            <option>Manokwari</option>
+                                            <option>Nabire</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Jenis Kapal</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option></option>
+                                          <option>Option 1</option>
+                                          <option>Option 2</option>
+                                          <option>Option 3</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 col-md-3 col-lg-3">
+                                      <div class="form-group">
+                                        <label>Bulan</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option>April</option>
+                                          <option>Januari</div>
+                                          <option>Februari</option>
+                                          <option>Maret</option>
+                                        </select>
+  
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Alat Penangkap Ikan(API)</label>
+                                        <select class="form-control select2" style="width:100%">
+                                          <option></option>
+                                          <option>Option 1</option>
+                                          <option>Option 2</option>
+                                          <option>Option 3</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 col-md-3 col-lg-3">
+                                      <div class="form-group">
+                                        <label>Tahun</label>
+                                        <select class="form-control select2"  style="width:100%">
+                                          <option>2022</option>
+                                          <option>2020</option>
+                                          <option>2021</option>
+                                        </select>
+                                        
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Total Muatan Hasil Tangkap</label>
+                                        <div class="btn-group">
+                                        <input type="text" class="form-control-sm" style="width:100px;" placeholder="minimal">s/d
+                                        <input type="text" class="form-control-sm" style="width:100px;" placeholder="maximal">
+                                        </div>
+                                      </div>
+                                    </form>
+                                </div> -->
+                              </div>
+                              <div class="btn-group">
+                              <a href="file/Laporan Rekapitulasi Kedatangan Kapal perikanan izin Pusat dan Daerah.xlsx"><button class="btn btn-sm btn-outline-success m-1">export ke excel</button></a>
+                              <button class="btn btn-sm btn-outline-success m-1">export ke csv</button>
+                              <a href="file/Laporan Rekapitulasi Kedatangan Kapal perikanan izin Pusat dan Daerah.pdf" target="_blank"><button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf"></i>cetak pdf</button></a>
+                              </div>
+                            <div class="table-responsive">
+                            <table class="table table-bordered table-md">
+                              <tr>
+                                <th>Nama Kapal</th>
+                                <th>GT</th>
+                                <th> Jenis Kapal</th>
+                                <th>Nama Perusahaan/Pemilik</th>
+                                <th>Pelabuhan Pangkalan</th>
+                                <th>DPI/ Pelabuhan Tujuan</th>
+                                <th>API</th>
+                                <th>No SIPI/SIKPI/BPKP</th>
+                                <th>Tgl berakhir SIPI/SIKPI/BPKP</th>
+                                <th>Tgl SLO/SKP SLO</th>
+                                <th>No. Reg</th>
+                                <th>No.SLO/SKP SLO</th>
+                                <th>Tgl HPK-d</th>
+                                <th>No HPK-d</th>
+                                <th>Muatan Hasil tangkapan/Ikan yang diangkut</th>
+                                <th>Kuota tangkapan ikan</th>
+                                <th>Total Muatan Hasil tangkapan/Ikan yang diangkut</th>
+                                <th>Sisa Kuota</th>
+                                <th>Keterangan</th>
+                              </tr>
+                              <tr>
+                                <td>jenius</td>
+                                <td>35</td>
+                                <td>Kapal Penangkap Ikan</td>
+                                <td>PT. Berlayar</td>
+                                <td>Pangkalan Jakarta</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button class="btn btn-sm btn-outline-info">Lihat</button></td>
+                                <td>1000 ton</td>
+                                <td>900 ton</td>
+                                <td>100 ton</td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="main-content">
+        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Generate Tanda Terima</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Membuat Tanda Terima Pengaduan/Laporan Masyarakat</p>
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <a href="#" class="btn btn-icon icon-left btn-secondary" data-dismiss="modal"></i> Edit</a>
+                <a href="tanda-terima.html" class="btn btn-icon icon-left btn-primary"></i> Generate</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="../assets/modules/jquery.min.js"></script>
+  <script src="../assets/modules/popper.js"></script>
+  <script src="../assets/modules/tooltip.js"></script>
+  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../assets/modules/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="../assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="../assets/modules/chart.min.js"></script>
+  <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="../assets/modules/prism/prism.js"></script>
+  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+</body>
+</html>
