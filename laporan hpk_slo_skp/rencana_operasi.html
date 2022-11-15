@@ -32,6 +32,8 @@
 <!-- /END GA --></head>
 
 <body>
+
+
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
@@ -179,7 +181,7 @@
                 <div class="card-body">
                   <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
                     <h6 class="m-3">Filter Data</h6>
-                  <div class="form row ml-3 mr-3">
+                  <div class="form-row ml-3 mr-3">
                       <div class="col col-sm">
                         <form>
                           <div class="form-group">
@@ -195,7 +197,7 @@
                       </div>
                       <div class="col col-sm">
                         <label>wilayah operasi WPPNRI</label>
-                        <select class="form-control select2">
+                        <select class="form-control select2" style="width:100%;">
                           <option>--WPPNRI--</option>
                           <option>Option 1</option>
                           <option>Option 2</option>
@@ -203,15 +205,15 @@
                       </div>
                       <div class="col col-sm">
                         <label>wilayah operasi Laut/perairan</label>
-                        <select class="form-control select2">
+                        <select class="form-control select2" style="width:100%;">
                           <option>--Laut/perairan--</option>
                           <option>Option 1</option>
                           <option>Option 2</option>
                         </select>
                       </div>
                   </div>
-                <div class="form-row ml-3">
-                  <div class="col-md-6 col-sm-12 ml-3 mb-2">
+                <div class="form-row ml-3 mb-3">
+                  <div class="col col-sm">
                     <label>Kapal Pengawas</label>
                     <select class="form-control select2" style="width:100%;">
                       <option>--kapal pengawas--</option>
@@ -219,23 +221,32 @@
                       <option>Hiu 13</option>
                     </select>
                   </div>
-                  <div class="col-md-4 col-sm-12 ml-3 mb-2">
+                  <div class="col col-sm">
+                    <label>Status Operasi</label>
+                    <select class="form-control" style="width:100%;">
+                      <option>Draft Rencana Operasi</option>
+                      <option>Siap Dilaksanakan</option>
+                      <option>Dibatalkan</option>
+                      <option>Selesai Dilaksanakan</option>
+                    </select>
+                  </div>
+                  <div class="col col-sm">
                     <label>cari semua data disini</label>
                     <input type="text" class="form-control" placeholder="cari nama nakoda/ nama awak kapal">
                   </div>
                   <div class="col col-sm">
                     <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
                   </div>
-            </div>
-          </div>
-          <div class="row m-3">
-            <div class="btn-group">
-                <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke excel</button>
-                <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke csv</button>
-                <button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf"></i> cetak pdf</button>
                 </div>
-          </div>
-
+              </div> 
+              <!-- end filter -->
+                  <div class="row m-3">
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke excel</button>
+                        <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke csv</button>
+                        <button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf"></i> cetak pdf</button>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                       <table class="table table-bordered table-md">
                         <tr>
@@ -252,7 +263,8 @@
                           <th>Status operasi</th>
                           <th>Dibuat</th>
                           <th>Diupdate</th>
-                          <th>dokumen rencana operasi</th>
+                          <th>Dokumen rencana operasi</th>
+                          <th>Aksi</th>
                         </tr>
                         <tr>
                           <td>1</td>
@@ -299,76 +311,304 @@
                           </td>
                           <td>
                             <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button class="btn btn-sm btn-warning m-2"><a href="tambah_rencana_operasi_c.html" style="color:white;"><i class="fa fa-upload"></i> upload</a></button>
-                             <button class="btn btn-sm btn-outline-info m-2"> <a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              <button type="button" class="btn btn-sm btn-warning m-2"  data-toggle="modal" data-target="#upload-surat-tugas"><i class="fa fa-upload"></i> upload</button>
+                             <button class="btn btn-sm btn-outline-info m-2"> <a href="#"><i class="fa fa-info-circle"></i> lihat</a></button>
                             </div>
                           </td>
-                          <td><div class="badge badge-warning">Siap Dilaksanakan</div>
-                            <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi_c.html" style="color:orange;"><i class="fa fa-edit"></i> Edit</a></button></td>
+                          <td><div class="badge badge-info">Draft Rencana Operasi</div>
                           <td>10/09/2022</td>
                           <td></td>
                           <td>
                               <button class="btn btn-sm btn-warning m-2"><a href="file/rencana_operasi_pengawasan.pdf" target="_blank" style="color:white;"><i class="fa fa-file-download"></i> download</a></button>
                           </td>
+                          <td>
+                            <div class="btn btn-group">
+                              <button type="button" class="btn btn-sm btn-warning m-2" data-toggle="modal" data-target="#laksanakan-operasi"><i class="fa fa-check"></i> Laksanakan Operasi</button>
+                              <button type="button" class="btn btn-sm btn-outline-danger m-2" data-toggle="modal" data-target="#hapus-draft"><i class="fa fa-trash"></i> Hapus Draft</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>22 Sep 2022 s/d 25 Sep 2022</td>
+                          <td>
+                            <ul>
+                              <li>WPPNRI 711, Laut Natuna Utara</li>
+                              <li>WPPNRI 722, Laut .....</li>
+                            </ul>
+                            
+                          </td>
+                          <td>
+                            <ul>
+                              <li>HIU 15</li>
+                            </ul>
+                            
+                          </td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_b.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi_b.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                             <button class="btn btn-sm btn-outline-warning m-2"> <a href="tambah_rencana_operasi_c.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-sm btn-warning m-2"  data-toggle="modal" data-target="#upload-surat-tugas"><i class="fa fa-upload"></i> ubah</button>
+                             <button class="btn btn-sm btn-outline-info m-2"> <a href="#"><i class="fa fa-info-circle"></i> lihat</a></button>
+                            </div>
+                          </td>
+                          <td><div class="badge badge-info">Draft Rencana Operasi</div>
+                          <td>10/09/2022</td>
+                          <td></td>
+                          <td>
+                              <button class="btn btn-sm btn-warning m-2"><a href="file/rencana_operasi_pengawasan.pdf" target="_blank" style="color:white;"><i class="fa fa-file-download"></i> download</a></button>
+                          </td>
+                          <td>
+                            <div class="btn btn-group">
+                              <button type="button" class="btn btn-sm btn-warning m-2" data-toggle="modal" data-target="#laksanakan-operasi"><i class="fa fa-check"></i> Laksanakan Operasi</button>
+                              <button type="button" class="btn btn-sm btn-outline-danger m-2" data-toggle="modal" data-target="#hapus-draft"><i class="fa fa-trash"></i> Hapus Draft</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>1 Juli 2022 s/d 29 Agustis 2022</td>
+                          <td>
+                            <ul>
+                              <li>WPPNRI 711, Laut .....</li>
+                              <li>WPPNRI 722, Laut .....</li>
+                            </ul>
+                            
+                          </td>
+                          <td>
+                            <ul>
+                              <li>HIU 16</li>
+                               <li>HIU 18</li>
+                            </ul>
+                            
+                          </td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_b.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                             
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                             <button class="btn btn-sm btn-outline-info m-2"> <a href="#"><i class="fa fa-info-circle"></i> lihat</a></button>
+                            </div>
+                          </td>
+                          <td><div class="badge badge-warning">Siap Dilaksanakan</div>
+                          <td>04/09/2022</td>
+                          <td></td>
+                          <td>
+                              <button class="btn btn-sm btn-warning m-2"><a href="file/rencana_operasi_pengawasan.pdf" target="_blank" style="color:white;"><i class="fa fa-file-download"></i> download</a></button>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-danger m-2" data-toggle="modal" data-target="#batalkan-operasi"><i class="fa fa-power-off"></i> Batalkan Operasi</button></td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>1 Juli 2022 s/d 29 Agustis 2022</td>
+                          <td>
+                            <ul>
+                              <li>WPPNRI 711, Laut .....</li>
+                              <li>WPPNRI 722, Laut .....</li>
+                            </ul>
+                            
+                          </td>
+                          <td>
+                            <ul>
+                              <li>HIU 16</li>
+                               <li>HIU 18</li>
+                            </ul>
+                            
+                          </td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_b.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                              
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
+                             
+                            </div>
+                          </td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                             <button class="btn btn-sm btn-outline-info m-2"> <a href="#"><i class="fa fa-info-circle"></i> lihat</a></button>
+                            </div>
+                          </td>
+                          <td><div class="badge badge-danger">Dibatalkan</div>
+                          <td>04/09/2022</td>
+                          <td></td>
+                          <td>
+                              <button class="btn btn-sm btn-warning m-2"><a href="file/rencana_operasi_pengawasan.pdf" target="_blank" style="color:white;"><i class="fa fa-file-download"></i> download</a></button>
+                          </td>
+                          <td>
+                           
+                          </td>
                         </tr>
                       </table>
                   </div>
-                  <!-- <div class="card-footer text-right">
-                    <nav class="d-inline-block">
-                      <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div> -->
                 </div>
               </div>
             </div>
-          </div>
         </section>
       </div>
-      <div class="main-content">
-        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
-          <div class="modal-dialog" role="document">
+
+      <div class="modal fade" id="upload-surat-tugas" tabindex="-1" role="dialog" aria-labelledby="upload-surat-tugas" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Upload Surat Tugas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="file" class="form-control">
+                <span>format file pdf, ukuran max 5 MB</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Simpan</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="batalkan-operasi" tabindex="-1" role="dialog" aria-labelledby="upload-surat-tugas" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Generate Tanda Terima</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Batalkan Rencana Operasi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <p>Membuat Tanda Terima Pengaduan/Laporan Masyarakat</p>
+                <span>Apakah anda akan membatalkan rencana operasi pada tanggal <b>22 September 2022 sd 25 oktober 2022</b> di wilayah operasi <b>WPPNRI 771, laut natuna utara?</b></span>
               </div>
-              <div class="modal-footer bg-whitesmoke br">
-                <a href="#" class="btn btn-icon icon-left btn-secondary" data-dismiss="modal"></i> Edit</a>
-                <a href="tanda-terima.html" class="btn btn-icon icon-left btn-primary"></i> Generate</a>
-
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ya, Batalkan Operasi</button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+
+          <div class="modal fade" id="hapus-draft" tabindex="-1" role="dialog" aria-labelledby="upload-surat-tugas" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Hapus Draft Rencana Operasi</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span>Apakah anda akan menghapus Draft rencana operasi pada tanggal <b>22 September 2022 sd 25 oktober 2022</b> di wilayah operasi <b>WPPNRI 771, laut natuna utara?</b></span>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-trash"></i> Ya, Hapus Draft</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="laksanakan-operasi" tabindex="-1" role="dialog" aria-labelledby="upload-surat-tugas" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Laksanakan Rencana Operasi</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span>Apakah anda akan melaksanakan rencana operasi pada tanggal <b>22 September 2022 sd 25 oktober 2022</b> di wilayah operasi <b>WPPNRI 771, laut natuna utara?</b></span>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                  <button type="button" class="btn btn-warning"><a href="rencana_operasi.html"><i class="fa fa-check-circle"></i> Ya, Laksanakan Operasi</a></button>
+                </div>
+              </div>
+            </div>
+            </div>
       <footer class="main-footer">
         <div class="footer-left">
           Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
         </div>
-        <div class="footer-right">
-          
-        </div>
+        
       </footer>
     </div>
   </div>
 
+  
   <!-- General JS Scripts -->
   <script src="../assets/modules/jquery.min.js"></script>
   <script src="../assets/modules/popper.js"></script>
@@ -380,17 +620,17 @@
   
   <!-- JS Libraies -->
   <script src="../assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script src="../assets/modules/chart.min.js"></script>
   <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
   <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+
   <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
   <script src="../assets/modules/prism/prism.js"></script>
   <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
 
-  <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index-0.js"></script>
+  
   
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>
