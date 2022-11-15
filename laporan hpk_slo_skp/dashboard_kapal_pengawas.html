@@ -14,8 +14,6 @@
   <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons.min.css">
   <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
-  <link rel="stylesheet" href="../assets/modules/prism/prism.css">
-  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -102,7 +100,7 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               
@@ -123,7 +121,6 @@
           </li>
         </ul>
       </nav>
-
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
@@ -152,8 +149,8 @@
                 <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
                 <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
                 <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
-                <li><a class="nav-link" href="lihat_bap.html">BA Hasil Pemeriksaan</a></li>
-                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian Kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
               </ul>
             </li>
           </ul>  
@@ -164,156 +161,81 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>RINCIAN KAPAL YANG DITANGKAP OLEH KAPAL PENGAWAS PERIKANAN </h1>
+            <h1>Dashboard</h1>
           </div>
-      
-      
           <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
-                      <h6 class="m-3">Filter Data</h6>
-                        <div class="row m-3">
-                            <div class="col col-sm">
-                              <form>
-                                <div class="form-group">
-                                  <label>Tanggal mulai</label>
-                                  <input type="text" class="form-control datepicker">
-                                </div>
-                            </div>
-                            <div class="col col-sm">
-                              <div class="form-group">
-                              <label>Tanggal akhir</label>
-                                  <input type="text" class="form-control datepicker">
-                            </div>
-                            </div>
-                            <div class="col col-sm">
-                              <label>Kapal Pengawas</label>
-                              <select class="form-control select2">
-                                <option>--kapal pengawas--</option>
-                                <option>Hiu 15</option>
-                                <option>Hiu 13</option>
-                              </select>
-                            </div>
-                            <div class="col col-sm">
-                                <label>Bendera Kapal</label>
-                                <select class="form-control select2">
-                                  <option></option>
-                                  <option>Indonesia</option>
-                                  <option>Malaysia</option>
-                                  <option>Cina</option>
-                                </select>
-                            </div>
-                          </div>
-                          <div class="row mr-3 ml-3 mb-3">
-                            <div class="col-4 col-md-4 col-lg-4">
-                                <label>GT</label>
-                                <select class="form-control select2">
-                                  <option></option>
-                                  <option> < 30 </option>
-                                  <option>>=30</option>
-                                </select>
-                              </div>
-                            <div class="col-4 col-md-4 col-lg-4">
-                              <label>cari semua disini</label>
-                              <input type="text" class="form-control" placeholder="cari semua disini...">
-                            </div>
-                            <div class="col col-sm">
-                              <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
-                            </form>
-                            </div>
-                          </div>
-                          
-                      </div>
-                     
-                    <div class="row m-3">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-success m-1">export ke excel</button>
-                            <button class="btn btn-sm btn-outline-success m-1">export ke csv</button>
-                            <button class="btn btn-sm btn-outline-success m-1">cetak pdf</button>
-                            </div>
-                    </div>
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-md">
-                        <tr>
-                          <th>No.</th>
-                          <th>Tanggal</th>
-                          <th>Kapal Pengawas</th>
-                          <th>Nama Kapal</th>
-                          <th>GT</th>
-                          <th>Asal Negara Kapal</th>
-                          <th>Bendera Kapal</th>
-                          <th>Jumlah Awak(orang)</th>
-                          <th>Alat tangkap</th>
-                          <th>Posisi Henrikhan</th>
-                          <th>Dugaan Pelanggaran</th>
-                          <th>Tindak Lanjut</th>
-                          
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>21 oktober 2022</td>
-                          <td>HIU15</td>
-                          <td>Witongtong</td>
-                          <td>45</td>
-                          <td>Cina</td>
-                          <td>Cina</td>
-                          <td>6</td>
-                          <td>bom atom</td>
-                          <td></td>
-                          <td>
-                            Telah diduga .....
-                          </td>
-                          <td>Pidana</td>
-                        </tr>
-                      </table>
-                    </div>
-                    </div>
-                  <!-- <div class="card-footer text-right">
-                    <nav class="d-inline-block">
-                      <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div> -->
+            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pengejaran-tab" href="dashboard_kapal_pengawas.html" role="tab" aria-controls="pengejaran" aria-selected="true">Dashboard Data Kapal pengawas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="ba-penolakan-tab" href="dashboard.html" role="tab" aria-controls="ba-penolakan" aria-selected="false">Dashboard Hasil Operasi Kapal Pengawas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-primary">
+                  <img src="../assets/icon/ship-solid.svg" class="img-fluid" style="width:50px;">
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Kapal Pengawas</h4>
+                  </div>
+                  <div class="card-body">
+                    20
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-      <div class="main-content">
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Berita Acara Pemeriksaan</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+            <div class="row">
+              <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Lokasi Kapal Pengawas</h4>
+                  </div>
+                  <div class="card-body">
+                    <img src="../assets/icon/kapal_pengawas.PNG" class="img-fluid">
+                  </div>
+                </div>
               </div>
-              <div class="modal-body">
-                Apakah berita acara pemeriksaan ditemukan pelanggaran
-              </div>
-              <div class="modal-footer">
-                <a href="bap.html"><button type="button" class="btn btn-outline-primary">Tidak Ditemukan Pelanggaran</button></a>
-                <a href="berkas_serah_terima.html"><button type="button" class="btn btn-outline-danger">Ditemukan Pelanggaran</button></a>
+              <div class="col-lg-4 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Daftar Kapal Pengawas Sedang  Beroperasi</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-sm table-bordered">
+                        <tr class="bg-primary text-center" style="color:white">
+                          <th>Nama Kapal Pengawas</th>
+                          <th>Tanggal Operasi</th>
+                          <th>Wilayah Operasi</th>
+                          <th>Nakoda</th>
+                          <th>ABK</th>
+                        </tr>
+                        <tr>
+                          <td>HIU 15</td>
+                          <td>06 nov 2022-10 nov 2022</td>
+                          <td>Laut Natuna</td>
+                          <td>Rian</td>
+                          <td><ul>
+                            <li>
+                              raka
+                            </li>
+                            <li>rai</li>
+                            <li>sam</li>
+                          </ul></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+        </section>
       </div>
       <footer class="main-footer">
         <div class="footer-left">
@@ -325,6 +247,38 @@
       </footer>
     </div>
   </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pilih Periode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="container">
+            <form class="form-group">
+              <label>mulai tanggal</label>
+              <input type="date" class="form-control">
+              <label>sampai tanggal</label>
+              <input type="date" class="form-control">
+            </form>
+          </div> 
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Terapkan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- General JS Scripts -->
   <script src="../assets/modules/jquery.min.js"></script>
@@ -341,19 +295,10 @@
   <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
   <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-  <script src="../assets/modules/prism/prism.js"></script>
-  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
 
-
-
-  <!-- JS Libraies -->
-  <script src="../assets/modules/prism/prism.js"></script>
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index-0.js"></script>
-  <!-- Page Specific JS File -->
-  <script src="../assets/js/page/bootstrap-modal.js"></script>
   
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>

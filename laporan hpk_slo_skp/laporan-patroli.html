@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
   <link rel="stylesheet" href="../assets/modules/prism/prism.css">
-  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -51,47 +50,47 @@
               </div>
               <div class="dropdown-list-content dropdown-list-icons">
                 <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Pengaduan Baru (3)
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan-atasan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Penolakan Baru (1)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="rekomendasi-atasan.html" class="dropdown-item">
                   <div class="dropdown-item-icon bg-info text-white">
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Inspeksi Lapangan (Insidental)
-                    <div class="time text-primary">2 Menit berlalu</div>
+                    Rekomendasi Inspeksi Baru (4)
+                    <div class="time text-warning">Kemarin</div>
                   </div>
                 </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-success text-white">
-                    <i class="far fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Inspeksi Lapangan (Rutin)
-                    <div class="time">Kemarin</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
+                <a href="laporan-atasan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-success text-white">
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Inspeksi Lapangan (Khusus)
-                    <div class="time">Kemarin</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
-                    <i class="fas fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Inspeksi Lapangan (Khusus)
+                    Laporan Inspeksi Baru (5)
                     <div class="time">2 Hari Berlalu</div>
                   </div>
                 </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
+                <a href="laporan-patroli" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Inspeksi Lapangan (Insidental)
+                    Laporan Patroli Baru (2)
                     <div class="time">2 Hari Berlalu</div>
                   </div>
                 </a>
@@ -102,8 +101,8 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Atasan Langsung</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               
               <a href="features-profile.html" class="dropdown-item has-icon">
@@ -116,14 +115,13 @@
                 <i class="fas fa-cog"></i> Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
+              <a href="rekomendasi-atasan.html" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
             </div>
           </li>
         </ul>
       </nav>
-
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
@@ -149,7 +147,7 @@
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
+                  <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
                 <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
                 <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
                 <li><a class="nav-link" href="lihat_bap.html">BA Hasil Pemeriksaan</a></li>
@@ -159,19 +157,21 @@
           </ul>  
       </div>
 
-
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Rencana Operasi Kapal Pengawas Perikanan</h1>
+            <h1>Laporan Hasil Patroli/Perondaan</h1>
           </div>
-          <div class="container m-3">
-            <div class="row">
-              <div class="btn-group" >
-                <a href="tambah_rencana_operasi.html"><button class="btn btn-primary m-2">+ Tambah Operasi Pengawasan</button></a>
-              </div>
-            </div>
+          <div class="row">
+            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link " id="pengejaran-tab" href="lihat_bap.html" role="tab" aria-controls="pengejaran" aria-selected="true">Pengawasan Sumber Daya Perikanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="ba-penolakan-tab" href="laporan-patroli.html" role="tab" aria-controls="ba-penolakan" aria-selected="false">Pengawasan Sumber Daya Kelautan</a>
+              </li>
+            </ul>
           </div>
           <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
@@ -179,141 +179,115 @@
                 <div class="card-body">
                   <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
                     <h6 class="m-3">Filter Data</h6>
-                  <div class="form row ml-3 mr-3">
-                      <div class="col col-sm">
-                        <form>
-                          <div class="form-group">
-                            <label>Tanggal mulai</label>
-                            <input type="text" class="form-control datepicker">
+                      <div class="row m-3">
+                          <div class="col col-sm">
+                            <form>
+                              <div class="form-group">
+                                <label>Tanggal mulai</label>
+                                <input type="text" class="form-control datepicker">
+                              </div>
+                          </div>
+                          <div class="col col-sm">
+                            <div class="form-group">
+                            <label>Tanggal akhir</label>
+                                <input type="text" class="form-control datepicker">
+                            </div>
+                          </div>
+                          <div class="col col-sm">
+                            <label>Kapal Pengawas</label>
+                          <select class="form-control select2" style="width:100%">
+                            <option>--kapal pengawas--</option>
+                            <option>Hiu 15</option>
+                            <option>Hiu 13</option>
+                          </select>
+                          </div>
+                          <div class="col col-sm">
+                            <label>Dugaan Pelanggaran</label>
+                                <select class="form-control select2">
+                                  <option></option>
+                                  <option>Ada</option>
+                                  <option>Tidak Ada</option>
+                                </select>
+                          </div>
+                          
+                          <div class="col-2 col-sm">
+                            <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
+                          </form>
                           </div>
                       </div>
-                      <div class="col col-sm">
-                        <div class="form-group">
-                        <label>Tanggal akhir</label>
-                            <input type="text" class="form-control datepicker">
-                      </div>
-                      </div>
-                      <div class="col col-sm">
-                        <label>wilayah operasi WPPNRI</label>
-                        <select class="form-control select2">
-                          <option>--WPPNRI--</option>
-                          <option>Option 1</option>
-                          <option>Option 2</option>
-                        </select>
-                      </div>
-                      <div class="col col-sm">
-                        <label>wilayah operasi Laut/perairan</label>
-                        <select class="form-control select2">
-                          <option>--Laut/perairan--</option>
-                          <option>Option 1</option>
-                          <option>Option 2</option>
-                        </select>
+                      <div class="row ml-3 mb-3 mr-3">
+                        <div class="col-8 col-sm-8">
+                          <input type="text" class="form-control" placeholder="cari....">
+                        </div>
+                        
                       </div>
                   </div>
-                <div class="form-row ml-3">
-                  <div class="col-md-6 col-sm-12 ml-3 mb-2">
-                    <label>Kapal Pengawas</label>
-                    <select class="form-control select2" style="width:100%;">
-                      <option>--kapal pengawas--</option>
-                      <option>Hiu 15</option>
-                      <option>Hiu 13</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 col-sm-12 ml-3 mb-2">
-                    <label>cari semua data disini</label>
-                    <input type="text" class="form-control" placeholder="cari nama nakoda/ nama awak kapal">
-                  </div>
-                  <div class="col col-sm">
-                    <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
-                  </div>
-            </div>
-          </div>
-          <div class="row m-3">
-            <div class="btn-group">
-                <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke excel</button>
-                <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke csv</button>
-                <button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf"></i> cetak pdf</button>
-                </div>
-          </div>
-
                     <div class="table-responsive">
                       <table class="table table-bordered table-md">
                         <tr>
-                          <th>No.</th>
-                          <th>Tanggal Penugasan</th>
-                          <th>Wilayah Operasi</th>
+                          <th>No</th>
+                          <th>Tanggal Pemeriksaan</th>
                           <th>Nama Kapal Pengawas</th>
-                          <th>Nakoda Kapal</th>
-                          <th>Awak kapal</th>
-                          <th>Sasaran/Fokus Operasi</th>
-                          <th>Peta Operasi</th>
-                          <th>Analisis Indikasi Kerawanan</th>
-                          <th>Surat Tugas</th>
-                          <th>Status operasi</th>
-                          <th>Dibuat</th>
-                          <th>Diupdate</th>
-                          <th>dokumen rencana operasi</th>
+                          <th>Nomor</th>
+                          <th>Unit Kerja</th>
+                          <th>Dasar/Perintah</th>
+                          <th>Lokasi Patroli</th>
+                          <th>Petugas</th>
+                          <th>Dugaan Pelanggaran</th>
+                          <th>Hasil Temuan</th>
+                          <th>Tindakan</th>
+                          <th>Kesimpulan</th>
+                          <th>Saran</th>
+                          <th>Aksi</th>
                         </tr>
                         <tr>
                           <td>1</td>
-                          <td>22 Sep 2022 s/d 25 Sep 2022</td>
+                          <td>2017-01-09</td>
+                          <td>Hiu 15</td>
+                          <td>000111</td>
+                          <td>Belawan</td>
+                          <td>0000223</td>
+                          <td>Cijambe</td>
+                          <td>Agus Heryanto</td>
+                          <td><div class="badge badge-danger">Ada</div></td>
+                          <td>Terjadi Pelanggaran...</td>
+                          <td>Pencabutan Ijin</td>
+                          <td>Pelanggaran</td>
+                          <td>Inspeksi Khusus</td>
                           <td>
-                            <ul>
-                              <li>WPPNRI 711, Laut Natuna Utara</li>
-                              <li>WPPNRI 722, Laut .....</li>
-                            </ul>
+                            <div class="btn-group btn-group-sm">
+                              <button class="btn btn-sm btn-outline-info m-1" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                              <button class="btn btn-sm btn-primary m-1"> <a href="ba-patroli.html.html" style="color:white;">Berita Acara Hasil Pemeriksaan</a></button>
+                              <a href="#" class="btn btn-sm btn-icon icon-left btn-warning m-1"><i class="far fa-file"></i> Download</a>
+                            </div>                         
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>2017-01-09</td>
+                          <td>Hiu 15</td>
+                          <td>000111</td>
+                          <td>Belawan</td>
+                          <td>0000223</td>
+                          <td>Cijambe</td>
+                          <td>Agus Heryanto</td>
+                          <td><div class="badge badge-success">Tidak ada</div></td>
+                          <td>Temuan nya...</td>
+                          <td>Pencabutan Ijin</td>
+                          <td>Pelanggaran</td>
+                          <td>Inspeksi Khusus</td>
+                          <td>
+                            <div class="btn-group btn-group-sm">
+                              <button class="btn btn-sm btn-outline-info m-1" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                              <button class="btn btn-sm btn-primary m-1"> <a href="ba-patroli.html.html" style="color:white;">Berita Acara Hasil Pemeriksaan</a></button>
+                              <a href="#" class="btn btn-sm btn-icon icon-left btn-warning m-1"><i class="far fa-file"></i> Download</a>
+                            </div>
                             
-                          </td>
-                          <td>
-                            <ul>
-                              <li>HIU 15</li>
-                            </ul>
-                            
-                          </td>
-                          <td>Rian Nuryadin</td>
-                          <td>
-                            <ul>
-                              <li>Raka</li>
-                              <li>Dadan</li>
-                              <li>Fitu</li>
-                            </ul>
-                          </td>
-                          
-                          <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi.html"><i class="fa fa-info-circle"></i> lihat</a></button>
-                              <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_b.html"><i class="fa fa-info-circle"></i> lihat</a></button>
-                              <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi_b.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button class="btn btn-sm btn-outline-info m-2"><a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
-                             <button class="btn btn-sm btn-outline-warning m-2"> <a href="tambah_rencana_operasi_c.html" style="color:orange;"><i class="fa fa-edit"></i> edit</a></button>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                              <button class="btn btn-sm btn-warning m-2"><a href="tambah_rencana_operasi_c.html" style="color:white;"><i class="fa fa-upload"></i> upload</a></button>
-                             <button class="btn btn-sm btn-outline-info m-2"> <a href="tambah_rencana_operasi_c.html"><i class="fa fa-info-circle"></i> lihat</a></button>
-                            </div>
-                          </td>
-                          <td><div class="badge badge-warning">Siap Dilaksanakan</div>
-                            <button class="btn btn-sm btn-outline-warning m-2"><a href="tambah_rencana_operasi_c.html" style="color:orange;"><i class="fa fa-edit"></i> Edit</a></button></td>
-                          <td>10/09/2022</td>
-                          <td></td>
-                          <td>
-                              <button class="btn btn-sm btn-warning m-2"><a href="file/rencana_operasi_pengawasan.pdf" target="_blank" style="color:white;"><i class="fa fa-file-download"></i> download</a></button>
                           </td>
                         </tr>
                       </table>
                   </div>
-                  <!-- <div class="card-footer text-right">
+                  <div class="card-footer text-right">
                     <nav class="d-inline-block">
                       <ul class="pagination mb-0">
                         <li class="page-item disabled">
@@ -329,30 +303,30 @@
                         </li>
                       </ul>
                     </nav>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </div>
-      <div class="main-content">
         <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Generate Tanda Terima</h5>
+                <h5 class="modal-title">Preview Hasil Patroli/Perondaan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <p>Membuat Tanda Terima Pengaduan/Laporan Masyarakat</p>
+                  <div>
+                    <img alt="image" src="assets/img/patroli.png" class="img-fluid">
+                  </div>
+                </a>
+
               </div>
               <div class="modal-footer bg-whitesmoke br">
-                <a href="#" class="btn btn-icon icon-left btn-secondary" data-dismiss="modal"></i> Edit</a>
-                <a href="tanda-terima.html" class="btn btn-icon icon-left btn-primary"></i> Generate</a>
-
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
               </div>
             </div>
           </div>
@@ -384,10 +358,9 @@
   <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
   <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
   <script src="../assets/modules/prism/prism.js"></script>
-  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
 
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index-0.js"></script>

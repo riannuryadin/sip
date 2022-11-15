@@ -152,8 +152,8 @@
                 <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
                 <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
                 <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
-                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
-                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">BA Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian Kapal yg ditangkap</a></li>
               </ul>
             </li>
           </ul>  
@@ -166,6 +166,16 @@
           <div class="section-header">
             <h1>Berita Acara Hasil Pemeriksaan Kapal</h1>
           </div>
+          <div class="row">
+            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pengejaran-tab" href="lihat_bap.html" role="tab" aria-controls="pengejaran" aria-selected="true">Pengawasan Sumber Daya Perikanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="ba-penolakan-tab" href="laporan-patroli.html" role="tab" aria-controls="ba-penolakan" aria-selected="false">Pengawasan Sumber Daya Kelautan</a>
+              </li>
+            </ul>
+          </div>
 
           <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
@@ -174,34 +184,29 @@
                   <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
                       <h6 class="m-3">Filter Data</h6>
                         <div class="row m-3">
-                            <div class="col-4 col-md-4 col-lg-4">
+                            <div class="col col-sm">
                               <form>
                                 <div class="form-group">
                                   <label>Tanggal mulai</label>
                                   <input type="text" class="form-control datepicker">
                                 </div>
                             </div>
-                            <div class="col-4 col-md-4 col-lg-4">
+                            <div class="col col-sm">
                               <div class="form-group">
                               <label>Tanggal akhir</label>
                                   <input type="text" class="form-control datepicker">
                             </div>
                             </div>
-                            <div class="col-4 col-md-4 col-lg-4">
-                              <button class="btn btn-primary mt-4">Tampilkan</button>
-                            </form>
-                            </div>
-                        </div>
-                      <div class="row m-3">
-                        <div class="col-4 col-md-4 col-lg-4">
-                          <label>Kapal Pengawas</label>
-                          <select class="form-control select2">
-                            <option>--kapal pengawas--</option>
-                            <option>Hiu 15</option>
-                            <option>Hiu 13</option>
-                          </select>
-                        </div>
-                        <div class="col-4 col-md-4 col-lg-4">
+                            
+                          <div class=" col col-sm">
+                            <label>Kapal Pengawas</label>
+                            <select class="form-control select2">
+                              <option>--kapal pengawas--</option>
+                              <option>Hiu 15</option>
+                              <option>Hiu 13</option>
+                            </select>
+                          </div>
+                          <div class="col col-sm">
                             <label>Bendera Kapal</label>
                             <select class="form-control select2">
                               <option></option>
@@ -210,9 +215,10 @@
                               <option>Cina</option>
                             </select>
                           </div>
-                      </div>
-                          <div class="row m-3">
-                            <div class="col-4 col-md-4 col-lg-4">
+                        </div>
+
+                          <div class="row ml-3 mr-3 mb-3">
+                            <div class="col col-sm">
                                 <label>GT</label>
                                 <select class="form-control select2">
                                   <option></option>
@@ -220,7 +226,7 @@
                                   <option>>=30</option>
                                 </select>
                               </div>
-                            <div class="col-4 col-md-4 col-lg-4">
+                            <div class="col col-sm">
                                 <label>Dugaan Pelanggaran</label>
                                 <select class="form-control select2">
                                   <option></option>
@@ -228,14 +234,29 @@
                                   <option>Tidak Ada</option>
                                 </select>
                               </div>
+                              <div class="col col-sm">
+                                <label>Kelengkapan berkas</label>
+                                <select class="form-control select2">
+                                  <option></option>
+                                  <option>Lengkap</option>
+                                  <option>Belum Lengkap</option>
+                                </select>
+                              </div>
+                              <div class="col col-sm">
+                                <label>cari semua disini</label>
+                                <input type="text" class="form-control" placeholder="cari semua disini...">
+                              </div>
                           </div>
-                          <div class="row m-3">
-                            
-                            <div class="col-4 col-md-4 col-lg-4">
-                              <label>cari semua disini</label>
-                              <input type="text" class="form-control" placeholder="cari semua disini...">
+                          <div class="row ml-3 mr-3 mb-3">
+                            <div class="col col-sm">
+                              <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
+                            </form>
                             </div>
                           </div>
+                      
+                            
+                            
+                         
                       </div>
                      
                     <div class="row m-3">
@@ -255,6 +276,7 @@
                           <th>Bendera Kapal</th>
                           <th>GT</th>
                           <th>Dugaan Pelanggaran</th>
+                          <th>Kelengkapan berkas</th>
                           <th>Aksi</th>
                         </tr>
                         <tr>
@@ -265,10 +287,12 @@
                           <td>Cina</td>
                           <td>50</td>
                           <td><div class="badge badge-danger">Ada</div></td>
+                          <td><div class="badge badge-danger">Belum Lengkap</div></td>
                           <td>
                             <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm btn-outline-info m-2"><a href="berkas_serah_terima.html">lihat detail</a></button>
-                                <a href="berkas_serah_terima.html"><button class="btn btn-sm btn-primary m-2">Berkas Serah terima</button></a>
+                                <button class="btn btn-sm btn-outline-info m-1"><a href="berkas_serah_terima.html"><i class="fas fa-info-circle"></i> lihat detail</a></button>
+                                <button class="btn btn-sm btn-primary m-1"><a href="berkas_serah_terima.html" style="color:white;">Berkas Serah terima</a></button>
+                                <button class="btn btn-sm btn-warning m-1"><a href="#" style="color:white;"> <i class="fa fa-download"></i>Download</a></button>
                             </div>
                           </td>
                         </tr>
@@ -280,11 +304,13 @@
                             <td>Indonesia</td>
                             <td>30</td>
                             <td><div class="badge badge-warning">Tidak ada</div></td>
+                            <td><div class="badge badge-success">Lengkap</div></td>
                           
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                    <button class="btn btn-sm btn-outline-info m-2"><a href="bap.html">lihat detail</a></button>
-                                    <a href="bap_sdp.html"><button class="btn btn-sm btn-outline-primary m-2">Berita Acara Hasil Pemeriksaan</button></a>
+                                    <button class="btn btn-sm btn-outline-info m-1"><a href="bap.html"><i class="fas fa-info-circle"></i> lihat detail</a></button>
+                                   <button class="btn btn-sm btn-primary m-1"> <a href="bap_sdp.html" style="color:white;">Berita Acara Hasil Pemeriksaan</a></button>
+                                   <button class="btn btn-sm btn-warning m-1"><a href="#" style="color:white;"> <i class="fa fa-download"></i>Download</a></button>
                                 </div>
                             </td>
                           </tr>

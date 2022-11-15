@@ -6,18 +6,18 @@
   <title>Dashboard &mdash; SIP-PSDKP</title>
 
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="../assets/modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons.min.css">
-  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons-wind.min.css">
-  <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
@@ -132,25 +132,25 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Menu Utama</li>
             <li class="dropdown">
-              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+              <a href="laporan hpk_slo_skp/dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Laporan HPK/SLO/SKP SLO</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="hpk_slo_skp.html"> Lihat Penerbitan SLO</a></li>
-                <li class="mb-4"><a class="nav-link" href="rekap_hpk_slo.html">Lihat Rekapitulasi SLO</a></liclas>
-                <li class="mb-5"><a class="nav-link" href="rekap_kk.html">Lihat Rekapitulasi Keberangkatan dan Kedatangan Kapal</a></li>
-                <li><a class="nav-link" href="frek_hpk_slo.html">Lihat Frekuensi kapal</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/hpk_slo_skp.html"> Lihat Penerbitan SLO</a></li>
+                <li class="mb-4"><a class="nav-link" href="laporan hpk_slo_skp/rekap_hpk_slo.html">Lihat Rekapitulasi SLO</a></liclas>
+                <li class="mb-5"><a class="nav-link" href="laporan hpk_slo_skp/rekap_kk.html">Lihat Rekapitulasi Keberangkatan dan Kedatangan Kapal</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/frek_hpk_slo.html">Lihat Frekuensi kapal</a></li>
               </ul>
             </li>
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
-                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
-                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
-                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
-                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/target_operasi.html">Target Operasi</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="laporan hpk_slo_skp/lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
               </ul>
             </li>
           </ul>  
@@ -164,16 +164,67 @@
             <h1>Dashboard</h1>
           </div>
           <div class="row">
-            <ul class="nav nav-tabs" id="myTab2" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link " id="pengejaran-tab" href="dashboard_kapal_pengawas.html" role="tab" aria-controls="pengejaran" aria-selected="true">Dashboard Data Kapal pengawas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" id="ba-penolakan-tab" href="dashboard.html" role="tab" aria-controls="ba-penolakan" aria-selected="false">Dashboard Hasil Operasi Kapal Pengawas</a>
-              </li>
-            </ul>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-primary">
+                  <img src="assets/icon/ship-solid.svg" class="img-fluid" style="width:50px;">
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Kapal Pengawas</h4>
+                  </div>
+                  <div class="card-body">
+                    200
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
+            <div class="row">
+              <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Lokasi Kapal Pengawas</h4>
+                  </div>
+                  <div class="card-body">
+                    <img src="assets/icon/kapal_pengawas.PNG" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Kapal Pengawas Sedang Melakukan Operasi Pengawasan</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-sm table-bordered">
+                        <tr class="bg-primary text-center" style="color:white">
+                          <th>Nama Kapal Pengawas</th>
+                          <th>Tanggal Operasi</th>
+                          <th>Wilayah Operasi</th>
+                          <th>Nakoda</th>
+                          <th>ABK</th>
+                        </tr>
+                        <tr>
+                          <td>HIU 15</td>
+                          <td>06 nov 2022-10 nov 2022</td>
+                          <td>Laut Natuna</td>
+                          <td>Rian</td>
+                          <td><ul>
+                            <li>
+                              raka
+                            </li>
+                            <li>rai</li>
+                            <li>sam</li>
+                          </ul></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           <div class="container" style="margin:auto; text-align:center;">
             <div class="row">
               <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
@@ -194,30 +245,8 @@
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                  <img src="../assets/icon/clipboard-regular.svg" style="width:30px;">
-                </div>
-                <div class="d-flex mt-4">
-                  <h6 class="mr-3">Total Kapal Di Periksa: </h6>
-                  <h3>300</h3>
-                </div>
-                <hr style="width: 400px; height:2px;border-width:0;color:gray;background-color:gray; margin-left:100px;">
-                <div class="d-flex">
-                  <div class="d-flex">
-                    <h6 class="mr-2">Kapal Ikan Indonesia: </h6>
-                    <h6>250</h6>
-                  </div>
-                  <div class="d-flex ml-5">
-                    <h6 class="mr-2">Kapal Ikan Asing: </h6>
-                    <h6>50</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
                 <div class="card-icon bg-danger">
-                  <img src="../assets/icon/handcuffs-solid.svg" style="width:50px;">
+                  <img src="assets/icon/handcuffs-solid.svg" style="width:50px;">
                 </div>
                 <div class="d-flex mt-4">
                   <h6 class="mr-3">Total Kapal Di tangkap: </h6>
@@ -236,18 +265,29 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Sebaran Kapal Ikan Yang Di Tangkap</h4>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-warning">
+                  <img src="assets/icon/clipboard-regular.svg" style="width:30px;">
                 </div>
-                <div class="card-body">
-                  <img src="../assets/icon/sebaran_tangkap.PNG" style="width:2000px;" class="img-fluid">
+                <div class="d-flex mt-4">
+                  <h6 class="mr-3">Total Kapal Di Periksa: </h6>
+                  <h3>300</h3>
+                </div>
+                <hr style="width: 400px; height:2px;border-width:0;color:gray;background-color:gray; margin-left:100px;">
+                <div class="d-flex">
+                  <div class="d-flex">
+                    <h6 class="mr-2">Kapal Ikan Indonesia: </h6>
+                    <h6>250</h6>
+                  </div>
+                  <div class="d-flex ml-5">
+                    <h6 class="mr-2">Kapal Ikan Asing: </h6>
+                    <h6>50</h6>
+                  </div>
                 </div>
               </div>
             </div>
+            
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-12 col-12 col-sm-12">
@@ -263,24 +303,32 @@
             <div class="col-lg-4 col-md-12 col-12 col-sm-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Rincian Kapal Yang Di Periksa Periode 1 Januari -31 Desember 2022</h4>
+                  <h4>Rincian Kapal Yang Di Tangkap</h4>
                 </div>
                 <div class="card-body">             
-                  <img src="../assets/icon/kapal_tangkap.PNG " class="img-fluid">
+                  <img src="assets/icon/kapal_tangkap.PNG " class="img-fluid">
                 </div>
-               </div>
+              </div>
               <div class="card">
                 <div class="card-header">
-                  <h4>Rincian Kapal Yang Di Tangkap Periode 1 Januari -31 Desember 2022</h4>
+                  <h4>Rincian Kapal Yang Di Periksa</h4>
                 </div>
                 <div class="card-body">             
-                  <img src="../assets/icon/kapal_tangkap.PNG " class="img-fluid">
+                  <img src="assets/icon/kapal_tangkap.PNG " class="img-fluid">
                 </div>
-              </div>
-             
+               </div>
               </div>
             </div>
-           
+            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Sebaran Kapal Ikan Yang Di Tangkap</h4>
+                </div>
+                <div class="card-body">
+                  <img src="assets/icon/sebaran_tangkap.PNG" style="width:2000px;" class="img-fluid">
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row">
 
@@ -331,27 +379,27 @@
 
 
   <!-- General JS Scripts -->
-  <script src="../assets/modules/jquery.min.js"></script>
-  <script src="../assets/modules/popper.js"></script>
-  <script src="../assets/modules/tooltip.js"></script>
-  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="../assets/modules/moment.min.js"></script>
-  <script src="../assets/js/stisla.js"></script>
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
   
   <!-- JS Libraies -->
-  <script src="../assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
-  <script src="../assets/modules/chart.min.js"></script>
-  <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
-  <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
   <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/index-0.js"></script>
   
   <!-- Template JS File -->
-  <script src="../assets/js/scripts.js"></script>
-  <script src="../assets/js/custom.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 </html>

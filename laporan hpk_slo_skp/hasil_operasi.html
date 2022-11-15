@@ -152,8 +152,8 @@
                 <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
                 <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
                 <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
-                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
-                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">BA Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian Kapal yg ditangkap</a></li>
               </ul>
             </li>
           </ul>  
@@ -195,7 +195,7 @@
                               </select>
                             </div>
                             <div class="col col-sm">
-                              <button class="btn btn-primary mt-4">Tampilkan</button>
+                              <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
                             </form>
                             </div>
                         </div>
@@ -296,7 +296,12 @@
                 </div>
               <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
-                <a href="bap_sdp.html" id="bap_sdp"><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+                <div id="bap-sdp">
+                <a href="bap_sdp.html" ><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+                </div>
+                <div id="bap-sdk">
+                <a href="ba-patroli.html"><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+                </div>
               </div>
             </div>
           </div>
@@ -346,8 +351,8 @@
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
   <script>
-    $(document).ready(fucntion(){
-      $('#bap').ready(function(){
+    $(document).ready(function(){
+      $('#pilih-bap').ready(function(){
         var value= $('select[name=buat-bap] option').filter(':selected').val()
         console.log(value)
         if(value=="sdp"){
@@ -359,8 +364,8 @@
           $("#bap-sdk").show();
         }
         });
-        $('#buat-bap').change(function(){
-          var value= $('select[name=bap] option').filter(':selected').val()
+        $('#pilih-bap').change(function(){
+          var value= $('select[name=buat-bap] option').filter(':selected').val()
           console.log(value)
           if(value=="sdp"){
             $("#bap-sdp").show();

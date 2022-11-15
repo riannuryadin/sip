@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="rekomendasi-atasan.html" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan/Laporan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="penerimaan.html">Penerimaan Pengaduan</a></li>
+                <li><a class="nav-link" href="tanda-terima.html">Tanda Terima</a></li>
+                <li><a class="nav-link" href="rekomendasi.html">Rekomendasi Inspeksi</a></li>
+                <li><a class="nav-link" href="penolakan.html">Penolakan Pengaduan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i> <span>Inspeksi Lapangan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="surat-tugas.html">Surat Tugas Inspeksi</a></li>
+                <li><a class="nav-link" href="inspeksi.html">BA Inspeksi Lapangan</a></li>
+                <li><a class="nav-link" href="form-KKPRL.html">Formulir P/K KKRPL</a></li>
+                <li><a class="nav-link" href="pengawasan-khusus.html">BA Pengawasan Khusus</a></li>
+                <li><a class="nav-link" href="laporan.html">Laporan Hasil Inspeksi</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Surat Tugas Inspeksi Lapangan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Inspeksi Lapanga</a></div>
+              <div class="breadcrumb-item">Surat Tugas</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Daftar Surat Tugas Inspeksi Lapangan</h4>
+                  <div class="card-header-form">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-md">
+                        <tr>
+                          <th>No.</th>
+                          <th>Nomor Surat</th>
+                          <th>Pemberi Surat</th>
+                          <th>Penerima Surat</th>
+                          <th>Tanggal Surat</th>
+                          <th>Tanggal Pelaksanaan</th>
+                          <th>Jenis Inspeksi</th>
+                          <th>ResposeTime</th>
+                          <th>Aksi</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-secondary">Insidental</div></td>
+                          <td>2 Menit Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-secondary">Insidental</div></td>
+                          <td>2 Menit Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-info">Rutin</div></td>
+                          <td>2 Jam Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-info">Rutin</div></td>
+                          <td>2 Jam Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-danger">Khusus</div></td>
+                          <td>2 Hari Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>001-02-8-2022</td>
+                          <td>Agus Heryanto</td>
+                          <td>Rian Nuryadin</td>
+                          <td>22-10-2022</td>
+                          <td>25-10-2022</td>
+                          <td><div class="badge badge-danger">Khusus</div></td>
+                          <td>2 Hari Lalu</td>
+                          <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info-circle"></i> Lihat Detail</button>
+                            <a href="#" class="btn btn-icon icon-left btn-warning"><i class="far fa-file"></i> Download</a>
+                          </td>
+                        </tr>
+                      </table>
+                  </div>
+                  <div class="card-footer text-right">
+                    <nav class="d-inline-block">
+                      <ul class="pagination mb-0">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Preview Surat Tugas Inspeksi Lapangan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <img alt="image" src="assets/img/surat-tugas.png" class="img-fluid">
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>

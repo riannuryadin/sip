@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="pengaduan-atasan.html" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown active">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan/Laporan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="penerimaan.html">Penerimaan Pengaduan</a></li>
+                <li><a class="nav-link" href="tanda-terima.html">Tanda Terima</a></li>
+                <li><a class="nav-link" href="rekomendasi.html">Rekomendasi Inspeksi</a></li>
+                <li><a class="nav-link" href="penolakan.html">Penolakan Pengaduan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i> <span>Inspeksi Lapangan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="surat-tugas.html">Surat Tugas inspeksi</a></li>
+                <li><a class="nav-link" href="inspeksi.html">BA Inspeksi Lapangan</a></li>
+                <li><a class="nav-link" href="form-KKPRL.html">Formulir P/K KKRPL</a></li>
+                <li><a class="nav-link" href="pengawasan-khusus.html">BA Pengawasan Khusus</a></li>
+                <li><a class="nav-link" href="laporan.html">Laporan Hasil Inspeksi</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-stats">
+                  <div class="card-stats-title">Statistics Pengaduan - 
+                    <div class="dropdown d-inline">
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">Bulan</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Pilih Bulan</li>
+                        <li><a href="#" class="dropdown-item">Januari</a></li>
+                        <li><a href="#" class="dropdown-item">Februari</a></li>
+                        <li><a href="#" class="dropdown-item">Maret</a></li>
+                        <li><a href="#" class="dropdown-item active">April</a></li>
+                        <li><a href="#" class="dropdown-item">Mei</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown d-inline">
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">UPT</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Pilih UPT</li>
+                        <li><a href="#" class="dropdown-item">Belawan</a></li>
+                        <li><a href="#" class="dropdown-item">Pontianak</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-stats-items">
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">80</div>
+                      <div class="card-stats-item-label">Diterima</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">25</div>
+                      <div class="card-stats-item-label">Ditelaah</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">5</div>
+                      <div class="card-stats-item-label">Ditolak</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-icon shadow-primary bg-primary">
+                  <i class="fas fa-columns"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Pengaduan</h4>
+                  </div>
+                  <div class="card-body">
+                    105
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-stats">
+                  <div class="card-stats-title">Statistics Inspeksi - 
+                    <div class="dropdown d-inline">
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">Bulan</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Pilih Bulan</li>
+                        <li><a href="#" class="dropdown-item">Januari</a></li>
+                        <li><a href="#" class="dropdown-item">Februari</a></li>
+                        <li><a href="#" class="dropdown-item">Maret</a></li>
+                        <li><a href="#" class="dropdown-item active">April</a></li>
+                        <li><a href="#" class="dropdown-item">Mei</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown d-inline">
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">UPT</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Pilih UPT</li>
+                        <li><a href="#" class="dropdown-item">Belawan</a></li>
+                        <li><a href="#" class="dropdown-item">Pontianak</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-stats-items">
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">97</div>
+                      <div class="card-stats-item-label">Rutin</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">75</div>
+                      <div class="card-stats-item-label">Insidental</div>
+                    </div>
+                    <div class="card-stats-item">
+                      <div class="card-stats-item-count">25</div>
+                      <div class="card-stats-item-label">Khusus</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-icon shadow-primary bg-primary">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Total Inspeksi Lapangan</h4>
+                  </div>
+                  <div class="card-body">
+                    209
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card card-statistic-2">
+                <div class="card-chart">
+                  <canvas id="sales-chart" height="80"></canvas>
+                </div>
+                <div class="card-icon shadow-primary bg-primary">
+                  <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <div class="card-wrap">
+                  <div class="card-header">
+                    <h4>Patroli Bidang Kelautan</h4>
+                  </div>
+                  <div class="card-body">
+                    32
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Statistik Pengaduan</h4>
+                </div>
+                <div class="card-body">
+                  <canvas id="myChart" height="158"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card gradient-bottom">
+                <div class="card-header">
+                  <h4>Penanganan Pengaduan</h4>
+                </div>
+                <div class="card-body" id="top-5-scroll">
+                  <ul class="list-unstyled list-unstyled-border">
+                    <li class="media">
+                      <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png" alt="product">
+                      <div class="media-body">
+                        <div class="media-title">Belawan</div>
+                        <div class="mt-1">
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-primary" data-width="84%"></div>
+                            <div class="budget-price-label">714</div>
+                          </div>
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-warning" data-width="63%"></div>
+                            <div class="budget-price-label">700</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <img class="mr-3 rounded" width="55" src="assets/img/products/product-4-50.png" alt="product">
+                      <div class="media-body">
+                        <div class="media-title">Pontianak</div>
+                        <div class="mt-1">
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-primary" data-width="66%"></div>
+                            <div class="budget-price-label">133</div>
+                          </div>
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-warning" data-width="40%"></div>
+                            <div class="budget-price-label">455</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png" alt="product">
+                      <div class="media-body">
+                        <div class="media-title">Lampulo</div>
+                        <div class="mt-1">
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-primary" data-width="34%"></div>
+                            <div class="budget-price-label">57</div>
+                          </div>
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-warning" data-width="28%"></div>
+                            <div class="budget-price-label">35</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <img class="mr-3 rounded" width="55" src="assets/img/products/product-3-50.png" alt="product">
+                      <div class="media-body">
+                        <div class="media-title">Tarakan</div>
+                        <div class="mt-1">
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-primary" data-width="45%"></div>
+                            <div class="budget-price-label">72</div>
+                          </div>
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-warning" data-width="20%"></div>
+                            <div class="budget-price-label">20</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <img class="mr-3 rounded" width="55" src="assets/img/products/product-4-50.png" alt="product">
+                      <div class="media-body">
+                        <div class="media-title">Biak</div>
+                        <div class="mt-1">
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-primary" data-width="65%"></div>
+                            <div class="budget-price-label">91</div>
+                          </div>
+                          <div class="budget-price">
+                            <div class="budget-price-square bg-warning" data-width="28%"></div>
+                            <div class="budget-price-label">12</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer pt-3 d-flex justify-content-center">
+                  <div class="budget-price justify-content-center">
+                    <div class="budget-price-square bg-primary" data-width="20"></div>
+                    <div class="budget-price-label">Pengaduan</div>
+                  </div>
+                  <div class="budget-price justify-content-center">
+                    <div class="budget-price-square bg-warning data-width="20"></div>
+                    <div class="budget-price-label">Tindak Lanjut</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Hasil Patroli Bidang Kelautan</h4>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <div class="text-small float-right font-weight-bold text-muted">2,100</div>
+                    <div class="font-weight-bold mb-1">Belawan</div>
+                    <div class="progress" data-height="3">
+                      <div class="progress-bar" role="progressbar" data-width="80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                          
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="text-small float-right font-weight-bold text-muted">1,880</div>
+                    <div class="font-weight-bold mb-1">Pontianak</div>
+                    <div class="progress" data-height="3">
+                      <div class="progress-bar" role="progressbar" data-width="67%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="text-small float-right font-weight-bold text-muted">1,521</div>
+                    <div class="font-weight-bold mb-1">Cilacap</div>
+                    <div class="progress" data-height="3">
+                      <div class="progress-bar" role="progressbar" data-width="58%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="text-small float-right font-weight-bold text-muted">884</div>
+                    <div class="font-weight-bold mb-1">Tarakan</div>
+                    <div class="progress" data-height="3">
+                      <div class="progress-bar" role="progressbar" data-width="36%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="text-small float-right font-weight-bold text-muted">473</div>
+                    <div class="font-weight-bold mb-1">Tahuna</div>
+                    <div class="progress" data-height="3">
+                      <div class="progress-bar" role="progressbar" data-width="28%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Petugas yang Sedang Patroli/Perondaan</h4>
+                  <div class="card-header-action">
+                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive table-invoice">
+                    <table class="table table-striped">
+                      <tr>
+                        <th>No. Surat Tugas</th>
+                        <th>Petugas</th>
+                        <th>Unit Kerja</th>
+                        <th>Tanggal Selesai</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td><a href="#">111-UPT-02-22</a></td>
+                        <td class="font-weight-600">Kusnadi</td>
+                        <td>Belawan</td>
+                        <td>19 November 2022</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">111-UPT-02-22</a></td>
+                        <td class="font-weight-600">Hasan Basri</td>
+                        <td>Belawan</td>
+                        <td>19 November 2022</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">111-UPT-02-22</a></td>
+                        <td class="font-weight-600">Muhamad Nuruzzaki</td>
+                        <td>Pontianak</td>
+                        <td>23 November 2022</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Data Izin Usaha Baru</h4>
+                  <div class="card-header-action">
+                    <a href="#" class="btn btn-warning">View More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive table-invoice">
+                    <table class="table table-striped">
+                      <tr>
+                        <th>No.</th>
+                        <th>No.Dokumen Perizinan</th>
+                        <th>Tanggal Terbit</th>
+                        <th>Jenis</th>
+                        <th>Pemohon</th>
+                        <th>Kegiatan</th>
+                        <th>Lokasi</th>
+                        <th>UPT</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>B-619/MEN-KP/X/2022</td>
+                        <td>2 Okt 2022</td>
+                        <td>Izin Lokasi</td>
+                        <td>PT Angin Gelut</td>
+                        <td>Pembangunan Dermaga</td>
+                        <td>Perairan Gilitrawangan</td>
+                        <td>Benoa</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>B-619/MEN-KP/X/2022</td>
+                        <td>2 Okt 2022</td>
+                        <td>Izin Lokasi</td>
+                        <td>PT Angin Gelut</td>
+                        <td>Pembangunan Dermaga</td>
+                        <td>Perairan Gilitrawangan</td>
+                        <td>Benoa</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>B-619/MEN-KP/X/2022</td>
+                        <td>2 Okt 2022</td>
+                        <td>Izin Lokasi</td>
+                        <td>PT Angin Gelut</td>
+                        <td>Pembangunan Dermaga</td>
+                        <td>Perairan Gilitrawangan</td>
+                        <td>Benoa</td>
+                        <td>
+                          <a href="#" class="btn btn-primary">Detail</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/jquery.sparkline.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
