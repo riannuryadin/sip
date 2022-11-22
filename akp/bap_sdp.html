@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; SIP-PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+ 
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="../assets/modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../assets/modules/codemirror/theme/duotone-dark.css">>
+  <link rel="stylesheet" href="../assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  
+  
+  <link rel="stylesheet" href="../assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../assets/modules/jquery-selectric/selectric.css">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/dropzonejs/dropzone.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+  
+
+  
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time text-primary">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="far fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Rutin)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+            
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+              </ul>
+            </li>
+          </ul>  
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Berita Acara Hasil Pemeriksaan</h1>
+          </div>
+          <!-- <div class="card">
+            <div class="card-header">
+              <h4>Jenis Berita Acara Hasil Pemeriksaan</h4>
+            </div>
+            <div class="card-body">
+              <select class="select2" style="width:100%">
+                <option></option>
+                <option>Sumber Daya Perikanan</option>
+                <option>Sumber Daya Kelautan</option>
+              </select>
+
+            </div>
+          </div> -->
+            <div class="card">
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal:</label>
+                    <div class="col-sm-2">
+                      <label>Pilih Tanggal</label>
+                      <input type="text" class="form-control datepicker" placeholder="Tanggal">
+                    </div>
+                    <div class="col-sm-2">
+                      <label>Jam</label>
+                      <input type="time" class="form-control" id="jam" placeholder="Jam">
+                    </div>
+                    <div class="col-sm-1">
+                      <label>.</label>
+                      <select class="form-control ">
+                        <option>WIB</option>
+                        <option>WIT</option>
+                        <option>WITA</option>
+                      </select>
+                    </div>
+                  </div> 
+                  <div class="form-group row">
+                    <label class="col-form-label text-md-left col-12 col-md-3 col-lg-3">Koordinat Pemeriksaan</label>
+                    <div class="col-sm-12 col-md-6">
+                      <label>Jenis Koordinat</label>
+                      <select class="form-control selectric" id="jenis-kor" name="jenis-kor">
+                        <option value="dms">Degree, minute, second</option>
+                        <option value="lat">Decimal Degree</option>
+                        <option value="utm">Koordinat UTM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="dms-form">
+                    <div class="form-group row">
+                      <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-1">
+                        <label>Derajat</label>
+                        <input type="text" class="form-control">                                
+                      </div>
+                      <div class="col-sm-1">
+                        <label>Menit</label>
+                        <input type="text" class="form-control">                            
+                      </div>
+                      <div class="col-sm-1">    
+                        <label>Detik</label>  
+                        <input type="text" class="form-control">                          
+                      </div>
+                      <div class="col-sm-2"> 
+                        <label>Garis Lintang</label><br>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="inlineradio1" value="option1">
+                          <label class="form-check-label" for="inlineradio1">LU</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="inlineradio1" value="option1">
+                          <label class="form-check-label" for="inlineradio1">LS</label>
+                        </div>                          
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-1">
+                        <label>Derajat</label>
+                        <input type="text" class="form-control">                                
+                      </div>
+                      <div class="col-sm-1">
+                        <label>Menit</label>
+                        <input type="text" class="form-control">                            
+                      </div>
+                      <div class="col-sm-1">    
+                        <label>Detik</label>  
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-sm-2"> 
+                        <label>Garis Bujur</label><br>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="inlineradio1" value="option1">
+                          <label class="form-check-label" for="inlineradio1">BT</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" id="inlineradio1" value="option1">
+                          <label class="form-check-label" for="inlineradio1">BB</label>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" id="lat-form">
+                      <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-4 form-group">
+                      <input type="text" class="form-control" placeholder="latitude">
+                      </div>
+                      <div class="col-sm-4 form-group">
+                        <input type="text" class="form-control" placeholder="longtitude">
+                        </div>
+                    </div>
+                    <div class="form-group row" id="utm-form">
+                        <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-4 form-group">
+                        <input type="text" class="form-control" placeholder="Easting (x)">
+                         </div>
+                         <div class="col-sm-4 form-group">
+                        <input type="text" class="form-control" placeholder="Northing (Y)">
+                        </div>
+                    </div>
+              <div class="row form-group mb-5">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Surat Perintah Pemeriksaan Kapal Pengawas</label>
+                      <div class="col-sm-3">
+                        <label>Nama Kapal Pengawas</label>
+                        <select class="form-control select2" style="width:100%">
+                          <option>-Nama Kapal Pengawas-</option>
+                          <option>Hiu 15</option>
+                          <option>lumba</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <label>Nomor Surat</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-sm-2">
+                        <label>Tanggal Surat</label>
+                        <input type="text" class="form-control datepicker">
+                      </div>
+
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Foto Surat Perintah Pemeriksaan Kapal Pengawas</label>
+                <div class="col-sm-6">
+                  <div id="image-preview" class="image-preview">
+                    <label for="image-upload" id="image-label">Pilih File</label>
+                    <input type="file" name="image" id="image-upload" />
+                  </div>
+                <span>Tambah Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Tim Pemeriksa Kapal</label>
+                <div class="col-sm-2">
+                  <label>NIP/No Kontrak Kerja</label>
+                  <select class="select2" style="width:100%">
+                    <option>42424242442</option>
+                    <option>6464646464</option>
+                    <option>42411232323</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Nama</label>
+                  <input type="text" class="form-control" value="rian nuryadin" disabled>
+                </div>
+                <div class="col-sm-2">
+                  <label>Pangkat/Golongan</label>
+                  <input type="text" class="form-control" value="IA" disabled>
+                </div>
+                <div class="col-sm-2">
+                  <label>Status Tim</label>
+                  <select class="form-control" style="width:100%">
+                    <option>Ketua Tim</option>
+                    <option>Anggota Tim</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-2">
+                  <button class="btn btn-sm btn-outline-primary">Tambah Anggota Tim</button>
+                </div>
+              </div>
+              <div class="btn-group row m-3">
+                <a href="hasil_operasi.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+                <button id="simpan-ppk" class="btn btn-primary" type="submit">Selanjutnya</button>
+              </div>
+              <hr>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Asal/Bendera Kapal</label>
+                  <div class="col-sm-6">
+                    <label>Asal/Bendera Kapal</label>
+                    <select id="bendera" name="bendera" class="select2 form-control" style="width:100%">
+                      <option value="wni">WNI</option>
+                      <option value="wna">WNA</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="row form-group" id="cari-kapal">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Cari nama kapal</label>
+                <div class="col-sm-5">
+                  <label>Cari Nama Kapal</label>
+                  <input type="text" class="form-control" placeholder="cari nama kapal" >
+                </div>
+                <div class="col-sm-1">
+                  <label>Aksi</label>
+                  <button class="btn btn-primary form-control">Cari</button>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Identitas/tanda-tanda kapal</label>
+                <div class="col-sm-2">
+                  <label>Nama Kapal Perikanan</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Asal/Bendera Kapal</label>
+                  <select class="select2" style="width:100%">
+                    <option>Indonesia</option>
+                    <option>Hongkong</option>
+                    <option>Malaysia</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Tanda Selar/GT Kapal</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Jenis Kapal</label>
+                  <select class="select2 form-control" style="width:100%">
+                    <option>pengangkap ikan</option>
+                    <option>pengangkut ikan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-4">
+                  <label>Kewarganegaraan Kapal Ikan</label>
+                  <select class="select2 form-control" style="width:100%">
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Lokasi Asal</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Tujuan Kapal Ikan</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Pemilik Kapal</label>
+                <div class="col-sm-4">
+                  <label>Pemilik Kapal</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-5">
+                  <label>Alamat Pemilik Kapal</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Dokumen/surat-surat kapal</label>
+                <div class="col-sm-3">
+                  <label>Jenis Dokumen Perizinan</label>
+                  <select class="select2" style="width:100%">
+                    <option>SIPI</option>
+                    <option>SIKPI</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Nomor Registrasi</label>
+                  <input type="text" class="form-control" placeholder="" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Masa Berlaku</label>
+                  <input type="text" class="form-control" placeholder="Masa berlaku dokumen perizinan" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Lainnya</label>
+                  <textarea class="form-control" placeholder="Diisi dengan keterangan lain yang ingin ditambahkan terkait dengan Dokumen/ surat-surat kapal"></textarea>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-3">
+                  <label>Jenis Dokumen Perizinan</label>
+                  <select class="select2" style="width:100%">
+                    <option>SKAT</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Nomor Transmiter</label>
+                  <input type="text" class="form-control" placeholder="" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Masa Berlaku</label>
+                  <input type="text" class="form-control" placeholder="Masa berlaku dokumen perizinan" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Lainnya</label>
+                  <textarea class="form-control" placeholder="Diisi dengan keterangan lain yang ingin ditambahkan terkait dengan Dokumen/ surat-surat kapal"></textarea>
+                </div>
+              </div>
+ 
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-3">
+                  <label>Jenis Dokumen Perizinan</label>
+                  <select class="select2" style="width:100%">
+                    <option>SLO</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <label>Nomor SLO</label>
+                  <input type="text" class="form-control" placeholder="" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Masa Berlaku</label>
+                  <input type="text" class="form-control" placeholder="Masa berlaku dokumen perizinan" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Lainnya</label>
+                  <textarea class="form-control" placeholder="Diisi dengan keterangan lain yang ingin ditambahkan terkait dengan Dokumen/ surat-surat kapal"></textarea>
+                </div>
+              </div>
+              
+ 
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Alat Penangkap Ikan dan Alat Bantu Penangkap Ikan</label>
+                <div class="col-sm-3">
+                  <label>Jenis API</label>
+                  <textarea class="form-control"></textarea>
+                
+                </div>
+                <div class="col-sm-3">
+                  <label>Jenis ABPI</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <div class="col-sm-3">
+                  <label>Lainnya</label>
+                  <textarea type="text" class="form-control" placeholder="Diisi dengan keterangan lain yang ingin ditambahkan terkait dengan API/ ABPI Kapal."></textarea>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Nakoda Kapal yang di periksa</label>
+                <div class="col-sm-2">
+                  <label>Nama</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Jenis Identitas</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-3">
+                  <label>Nomor Identitas</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Kewarganegaraan</label>
+                  <select class="form-control" style="width:100%">
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Identitas Nakhoda</label>
+                <div class="col-sm-2">
+                  <label>Nama Nakhoda</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Nomor Identitas Nakhoda</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-2">
+                  <label>Kewarganegaraan Nakoda</label>
+                  <select class="select2 form-control" style="width:100%">
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                  </select>
+                </div>
+              </div> -->
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Identitas KKM</label>
+                <div class="col-sm-4">
+                  <label>Nama KKM</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-sm-4">
+                  <label>Nomor Identitas KKM</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Keterangan Lainnya dari Identitas Kapal</label>
+                <div class="col-sm-8">
+                  <label>Keterangan Lainnya</label>
+                  <textarea class="form-control" style="width:100%"></textarea>
+                </div>
+              </div>
+              
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Awak Kapal</label>
+                <div class="col-sm-4">
+                  <label>Jumlah</label>
+                  <input type="text" class="form-control" placeholder="jumlah awak kapal ikan.">
+                </div>
+                <div class="col-sm-4">
+                  <label>Kewarganegaraan</label>
+                  <select class="select2 form-control" style="width:100%">
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-4">
+                    <label>Komposisi</label>
+                    <textarea type="text" class="form-control" placeholder="Diisi dengan komposisi awak kapal ikan.Contoh:1 orang Warga negara Indonesia dan 4 orang warga negara Malaysia."></textarea>
+                  </div>
+                  <div class="col-sm-4">
+                    <label>Lainnya</label>
+                    <textarea type="text" class="form-control" placeholder="Diisi dengan keterangan lain yang ingin ditambahkan terkait dengan awak kapal terperiksa (jika ada)." ></textarea>
+                  </div>
+              </div>
+              <div class="row form-group">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Keterangan Lain</label>
+                <div class="col-sm-8">
+                  <label></label>
+                  <textarea class="form-control summernote" placeholder ="Diisi dengan keterangan lain yang ingin ditambahkan (jika ada)." ></textarea>
+                </div>
+              </div>
+              <div class="btn-group row m-3">
+                <a href="hasil_operasi.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+                <button id="simpan-ppk" class="btn btn-primary" type="submit">Selanjutnya</button>
+              </div>
+              <hr>
+              <div class="row form-group" id="pelanggaran">
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Dugaan pelanggaran</label>
+                <div class="col-sm-4">
+                  <select id="pelanggaran" name="pelanggaran" class="select2" style="width:100%">
+                    <option></option>
+                    <option value="ada">Ada Dugaan Pelanggaran</option>
+                    <option value="tidak-ada""">Tidak Ada Dugaan Pelanggaran</option>
+                  </select>
+                </div>
+              </div>
+              <div id="kesimpulan-pem" class="mb-5">
+              <div class="row" >
+                <label for="wilayah operasi" class="col-sm-3 col-form-label">Kesimpulan Hasil Pemeriksaan</label>
+                  <div class="col-sm-4">
+                    <button class="btn btn-outline-danger">+Tambah kegiatan pelanggaran</button>
+                    <label>Diduga atau Patut diduga melakukan kegiatan</label>
+                    <select class="select2" style="width:100%">
+                    <option>kegiatan pelanggaran 1</option>
+                    <option>kegiatan pelanggaran 2</option>
+                      
+                    </select>
+                  </div>
+                  <div class="col-sm-5">
+                    <label class="mt-4">Diduga melanggar pasal</label>
+                    <select class="select2" multiple="true" name="choose_usr_email[]" id="choose_usr_email" style="width:100%">
+                    <option>pasal1</option>
+                    <option>pasal2</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group m-3">
+                <label for="tanggal" class="col-sm-3 col-form-label">Nakoda Kapal yang diperiksa</label>
+                    <div class="col-sm-6">
+                      <label>Nama Nakoda</label>
+                      <input type="text" class="form-control">     
+                    </div>
+              </div>
+              <div class="row form-group m-3">
+                <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-6">
+                    <label>Tanda Tangan Nakoda Kapal</label>
+                    <div id="root5" style="border: 1px solid gray"></div>
+                    </div>
+              </div>
+              <div class="row form-group m-3">
+                <label for="tanggal" class="col-sm-3 col-form-label">Komandan Kapal Pengawas....</label>
+                    <div class="col-sm-3">
+                      <label>Nama Komandan</label>
+                      <input type="text" class="form-control">                             
+                    </div>
+                    <div class="col-sm-3">
+                      <label>NIP</label>
+                      <input type="text" class="form-control">                             
+                    </div>
+              </div>
+              <div class="row form-group m-3">
+                <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-6">
+                    <label>Tanda Tangan Komandan Kapal Pengawas</label>
+                    <div id="root6" style="border: 1px solid gray"></div>
+
+                    </div>
+              </div>
+
+              <div id="daftar-saksi">
+                <div class="row form-group m-3" id="saksi">
+                  <label for="tanggal" class="col-sm-3 col-form-label">Saksi-Saksi</label>
+                        <div class="col-sm-3">
+                          <label>Nama</label>
+                          <input type="text" class="form-control">                             
+                        </div>
+                        <div class="col-sm-3">
+                          <label>NIP</label>
+                          <input type="text" class="form-control">                             
+                        </div>
+                      <div class="col-sm-1 mt-3">
+                        <div class=hapus>
+                          <input type="button" class=" btn btn-sm btn-danger" value="hapus" />
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <div class="row form-group m-3">
+              <label for="tanggal" class="col-sm-3 col-form-label"></label>
+              <button id="tambah-saksi" class="btn Fbtn-sm btn-outline-info">+ Tambah saksi</button>
+            </div>
+            <div class="row form-group m-3">
+              <label for="wilayah operasi" class="col-sm-3 col-form-label">File/Foto Berita Acara Hasil Pemeriksaan Kapal Perikanan </label>
+              <div class="col-sm-6">
+                <div id="image-preview" class="image-preview">
+                  <label for="image-upload" id="image-label">Pilih File</label>
+                  <input type="file" name="image" id="image-upload" />
+                </div>
+              <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Foto Dugaan Pelanggaran</h4>
+                  </div>
+                  <div class="card-body">
+                    <form action="#" class="dropzone" id="mydropzone">
+                      <div class="fallback">
+                        <input name="file" type="file" multiple />
+                      </div>
+                      <span>Tambah Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row form-group m-3">
+              <label for="wilayah operasi" class="col-sm-3 col-form-label">Foto Nakoda dan Awak Kapal</label>
+              <div class="col-sm-6">
+                <div id="image-preview" class="image-preview">
+                  <label for="image-upload" id="image-label">Pilih File</label>
+                  <input type="file" name="image" id="image-upload" />
+                </div>
+              <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+              </div>
+            </div>
+            <div class="row form-group m-3">
+              <label for="wilayah operasi" class="col-sm-3 col-form-label">Foto SLO</label>
+              <div class="col-sm-6">
+                <div id="image-preview" class="image-preview">
+                  <label for="image-upload" id="image-label">Pilih File</label>
+                  <input type="file" name="image" id="image-upload" />
+                </div>
+              <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+              </div>
+            </div>
+            <div class="row form-group m-3">
+              <label for="wilayah operasi" class="col-sm-3 col-form-label">Foto SPB</label>
+              <div class="col-sm-6">
+                <div id="image-preview" class="image-preview">
+                  <label for="image-upload" id="image-label">Pilih File</label>
+                  <input type="file" name="image" id="image-upload" />
+                </div>
+              <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+              </div>
+            </div>
+            <div class="row form-group m-3">
+              <label for="wilayah operasi" class="col-sm-3 col-form-label">Foto SKAT</label>
+              <div class="col-sm-6">
+                <div id="image-preview" class="image-preview">
+                  <label for="image-upload" id="image-label">Pilih File</label>
+                  <input type="file" name="image" id="image-upload" />
+                </div>
+              <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+              </div>
+            </div>
+            <div class="btn-group row m-3">
+              <a href="hasil_operasi.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+              <a href="hasil_operasi.html"><button id="simpan" class="btn btn-primary" type="submit">Simpan</button></a>
+             
+            </div>
+          </div>
+              <div class="tab-pane fade " id="lk" role="tabpanel" aria-labelledby="lk-tab">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Laporan Kejadian</h4>
+                  </div>
+                  <div class="card-Body">
+                    <div class="row form-group m-3">
+                      <label for="tanggal" class="col-sm-3 col-form-label">Nomor</label>
+                            <div class="col-sm-5">
+                              <input type="text" class="form-control">                             
+                            </div>
+                          </div>
+                    
+                          <div class="form-group row m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label">Peristiwa Yang Terjadi</label>
+                            <div class="col-sm-2">
+                              <label>Tanggal</label>
+                              <input type="text" class="form-control datepicker" placeholder="Tanggal">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Jam</label>
+                              <input type="time" class="form-control" id="jam" placeholder="Jam">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Waktu Bagian</label>
+                              <select class="form-control ">
+                                <option>WIB</option>
+                                <option>WIT</option>
+                                <option>WITA</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-3">
+                              <label>Tempat dan Posisi Kejadian</label>
+                              <select class="form-control select2" style="width:100%">
+                                <option>--WPPNRI--</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-2">
+                              <label>.</label>
+                              <select class="form-control select2" style="width:100%">
+                                <option>--Laut/perairan--</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                              <label>Apa yang terjadi?</label>
+                              <textarea class="summernote"></textarea>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group row m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                              <label>Nama Pelaku</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group row m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-5">
+                              <label>Bagaimana terjadi?</label>
+                              <textarea class="summernote"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group row m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-2">
+                              <label>Dilaporkan Pada Tanggal</label>
+                              <input type="text" class="form-control datepicker" placeholder="Tanggal">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Jam</label>
+                              <input type="time" class="form-control" id="jam" placeholder="Jam">
+                            </div>
+                            <div class="col-sm-1">
+                              <label>Waktu Bagian</label>
+                              <select class="form-control ">
+                                <option>WIB</option>
+                                <option>WIT</option>
+                                <option>WITA</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Dugaan Pelanggaran</label>
+                            <div class="col-sm-5">
+                              <label>Dugaan Pelanggaran, Diduga melanggar pasal</label>
+                              <textarea class="form-control summernote" >Melanggara Pasal</textarea>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Nama Dan Alamat Saksi-Saksi</label>
+                            <div class="col-sm-2">
+                              <label>Nama</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Suku</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Umur</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Jenis Kelamin</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-2">
+                              <label>Pekerjaan</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Jabatan</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-2">
+                              <label>Alamat</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-2">
+                            <button id="tambah-saksi" class="btn Fbtn-sm btn-outline-info">+ Tambah saksi</button>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Barang Hasil Pengawasan</label>
+                            <div class="col-sm-5">
+                              <label></label>
+                              <textarea class="form-control summernote" >Diisi dengan barang yang dipergunakan dan/atau dihasilkan dari kegiatan yang diduga sebagai pelanggaran.
+
+                                Contoh:
+                                1. 1 (satu) unit Kapal KG 9999 TS<br>
+                                2. 2 (dua) unit Alat Tangkap Pair Trawl<br>
+                                3. Hasil Tangkapan/Muatan Ikan Campur ± 1000kg
+                                </textarea>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Uraian singkat yang dilaporkan</label>
+                            <div class="col-sm-5">
+                              <label></label>
+                              <textarea class="form-control summernote" >Diisi dengan uraian singkat yang dilaporkan termasuk hari, tanggal, posisi hernikhan, dan dugaan pelanggaran.
+                                Contoh:<br>
+                                Benar bahwa pada hari Senin tanggal 12 bulan Januari tahun 2021 jam 16.25 WIB saat sedang melaksanakan patroli sesuai dengan Surat Tugas DIRJEN PSDKP No. SP. 111/PSDKP.1/KKP.444/I/2021 tanggal 8 Januari 2021 di Perairan Laut Natuna Utara telah melakukan pemeriksaan terhadap KIA dengan Nomor Lambung KG 9999 TS pada posisi  04°23.649'N, 105°04.875'E yang diduga sedang melakukan kegiatan perikanan di Perairan Laut Natuna Utara tanpa dilengkapi dokumen perizinan yang berlaku.
+                                
+                                </textarea>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Nama Kapal Ikan</label>
+                            <div class="col-sm-5">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">Tindakan yang dilakukan</label>
+                            <div class="col-sm-5">
+                              <select class="form-control">
+                                <option>diAd-hoc</option>
+                                <option>dikawal</option>
+                                <option>digandeng</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">ke Lokasi</label>
+                            <div class="col-sm-5">
+                             <select class="form-control select2" style="width:100%">
+                              <option>Pangkalan PSDKP Batam</option>
+                             </select>
+                            </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label">Pelapor</label>
+                                <div class="col-sm-3">
+                                  <label>Nama Pelapor</label>
+                                  <input type="text" class="form-control">     
+                                </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-6">
+                                <label>Tanda Tangan Pelapor</label>
+                                <div id="root7" style="border: 1px solid gray"></div>
+                                </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label">Komandan Kapal Pengawas....</label>
+                                <div class="col-sm-3">
+                                  <label>Nama Komandan</label>
+                                  <input type="text" class="form-control">                             
+                                </div>
+                                <div class="col-sm-3">
+                                  <label>NIP</label>
+                                  <input type="text" class="form-control">                             
+                                </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="tanggal" class="col-sm-3 col-form-label"></label>
+                                <div class="col-sm-6">
+                                <label>Tanda Tangan Komandan Kapal Pengawas</label>
+                                <div id="root8" style="border: 1px solid gray"></div>
+          
+                                </div>
+                          </div>
+                          <div class="row form-group m-3">
+                            <label for="wilayah operasi" class="col-sm-3 col-form-label">File/Foto Surat</label>
+                            <div class="col-sm-6">
+                              <div id="image-preview" class="image-preview">
+                                <label for="image-upload" id="image-label">Pilih File</label>
+                                <input type="file" name="image" id="image-upload" />
+                              </div>
+                            <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                            </div>
+                          </div>
+                          <div class="btn-group row m-3">
+                            <a href="hasil_operasi.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+                            <button id="simpan-ppk" class="btn btn-primary" type="submit">Simpan</button>
+                          </div>
+                      </div>
+                </div>
+              </div>
+              <div class="tab-pane fade " id="surat-notif-kemlu" role="tabpanel" aria-labelledby="surat-notif-kemlu-tab">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Surat Notifikasi kepada Kementerian Luar Negeri</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Nomor Surat</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Tanggal Terbit Surat</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Tujuan (Eselon 1 Kementerian Luar Negeri)</label>
+                      <div class="col-sm-9">
+                        <select class="select2" style="width:100%">
+                          <option>Direktur Jenderal Protokol dan Konsuler</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Upload File Foto Surat</label>
+                      <div class="col-sm-9">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Pilih File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <h6 class="col-sm-6 col-form-label"><b>Lampiran 1 (Rincian Kapal yang Ditangkap oleh Kapal Pengawas Perikanan)</b></h6>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Upload File Rincian Kapal</label>
+                      <div class="col-sm-9">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Pilih File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <h6 class="col-sm-6 col-form-label"><b>Lampiran 2 (Daftar Nama Awak Kapal Ikan Asing yang Ditangkap oleh Kapal Pengawas Perikanan)</b></h6>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Upload File Daftar Awak Kapal</label>
+                      <div class="col-sm-9">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Pilih File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <h6 class="col-sm-6 col-form-label"><b>Lampiran 3 (Posisi/Titik Koordinat Henrikhan Kapal Ikan Asing yang Ditangkap oleh Kapal Pengawas Perikanan)</b></h6>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Upload Gambar Peta Posisi Henrikhan Kapal Ikan</label>
+                      <div class="col-sm-9">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Pilih File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <h6 class="col-sm-6 col-form-label"><b>Lampiran 4 (Dokumentasi Kapal Ikan Asing yang Ditangkap oleh Kapal Pengawas Perikanan)</b></h6>
+                    </div>
+                    <div class="row form-group">
+                      <label for="wilayah operasi" class="col-sm-3 col-form-label">Upload File Foto/Gambar Dokumentasi</label>
+                      <div class="col-sm-9">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Pilih File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah File Pdf atau Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label text-md-left col-12 col-md-3 col-lg-3"></label>
+                      <div class="col-sm-12 col-md-6">
+                        <a href="#" class="btn btn-outline-primary">Tambah Gambar/Foto</a>
+                      </div>
+                    </div>
+                    <div class="btn-group row m-3">
+                      <a href="hasil_operasi.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+                      <button id="simpan-ppk" class="btn btn-primary" type="submit">Simpan</button>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="../assets/modules/jquery.min.js"></script>
+<script src="../assets/modules/popper.js"></script>
+  <script src="../assets/modules/tooltip.js"></script>
+  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script> -->
+  
+  <script src="../assets/modules/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script> -->
+  
+  <!-- JS Libraies -->
+  <script src="../assets/modules/cleave-js/dist/cleave.min.js"></script>
+  <script src="../assets/modules/cleave-js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script> 
+  <script src="../assets/js/page/features-post-create.js"></script>
+  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="../assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js"></script>
+  
+    <!-- JS Libraies -->
+<script src="../assets/modules/dropzonejs/min/dropzone.min.js"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="../assets/js/page/components-multiple-upload.js"></script>
+      <!-- JS Libraies -->
+   <script src="../assets/modules/sweetalert/sweetalert.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/modules-sweetalert.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index-0.js"></script>
+<script src="https://lemonadejs.net/v2/lemonade.js"></script>
+<script src="https://lemonadejs.net/v2/packages/signature/index.js"></script> 
+<script src="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+ 
+  
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('input.timepicker').timepicker({ timeFormat: 'HH:mm:ss p' });
+    $('#jenis-kor').change(function(){
+      var value= $('select[name=jenis-kor] option').filter(':selected').val()
+      console.log(value)
+      if(value=='dms'){
+        $("#dms-form").show();
+        $("#lat-form").hide();
+        $("#utm-form").hide();
+      }else if(value=='lat'){
+        console.log(value)
+        $("#dms-form").hide();
+        $("#lat-form").show();
+        $("#utm-form").hide();
+      }else if(value='utm'){
+        console.log(value)
+        $("#dms-form").hide();
+        $("#lat-form").hide();
+        $("#utm-form").show();
+      }
+    });
+    $('#jenis-kor').ready(function(){
+      var value= $('select[name=jenis-kor] option').filter(':selected').val()
+      if(value=='dms'){
+        $("#dms-form").show();
+        $("#lat-form").hide();
+        $("#utm-form").hide();
+      }else if(value=='lat'){
+        $("#dms-form").hide();
+        $("#lat-form").show();
+        $("#utm-form").hide();
+      }else if(value='utm'){
+        $("#dms-form").hide();
+        $("#lat-form").hide();
+        $("#utm-form").show();
+      }
+    });
+
+    $('#jenis-kor1').change(function(){
+      var value= $('select[name=jenis-kor1] option').filter(':selected').val()
+      console.log(value)
+      if(value=='dms'){
+        $("#dms-form1").show();
+        $("#lat-form1").hide();
+        $("#utm-form1").hide();
+      }else if(value=='lat'){
+        console.log(value)
+        $("#dms-form1").hide();
+        $("#lat-form1").show();
+        $("#utm-form1").hide();
+      }else if(value='utm'){
+        console.log(value)
+        $("#dms-form1").hide();
+        $("#lat-form1").hide();
+        $("#utm-form1").show();
+      }
+    });
+    $('#jenis-kor1').ready(function(){
+      var value= $('select[name=jenis-kor] option').filter(':selected').val()
+      console.log(value)
+      if(value=='dms'){
+        $("#dms-form1").show();
+        $("#lat-form1").hide();
+        $("#utm-form1").hide();
+      }else if(value=='lat'){
+        console.log(value)
+        $("#dms-form1").hide();
+        $("#lat-form1").show();
+        $("#utm-form1").hide();
+      }else if(value='utm'){
+        console.log(value)
+        $("#dms-form1").hide();
+        $("#lat-form1").hide();
+        $("#utm-form1").show();
+      }
+    });
+
+    $('#jenis-kor2').change(function(){
+      var value= $('select[name=jenis-kor2] option').filter(':selected').val()
+      console.log(value)
+      if(value=='dms'){
+        $("#dms-form2").show();
+        $("#lat-form2").hide();
+        $("#utm-form2").hide();
+      }else if(value=='lat'){
+        console.log(value)
+        $("#dms-form2").hide();
+        $("#lat-form2").show();
+        $("#utm-form2").hide();
+      }else if(value='utm'){
+        console.log(value)
+        $("#dms-form2").hide();
+        $("#lat-form2").hide();
+        $("#utm-form2").show();
+      }
+    });
+    $('#jenis-kor2').ready(function(){
+      var value= $('select[name=jenis-kor] option').filter(':selected').val()
+      console.log(value)
+      if(value=='dms'){
+        $("#dms-form2").show();
+        $("#lat-form2").hide();
+        $("#utm-form2").hide();
+      }else if(value=='lat'){
+        console.log(value)
+        $("#dms-form2").hide();
+        $("#lat-form2").show();
+        $("#utm-form2").hide();
+      }else if(value='utm'){
+        console.log(value)
+        $("#dms-form2").hide();
+        $("#lat-form2").hide();
+        $("#utm-form2").show();
+      }
+      });
+      $('.hapus').hide();
+      $("#tambah-saksi").click(function(){
+        var saksi=$("#saksi").clone().appendTo("#daftar-saksi");
+        $('.hapus').show();
+      });
+
+      $('#bendera').ready(function(){
+        var value= $('select[name=bendera] option').filter(':selected').val()
+        console.log(value)
+        if(value=='wni'){
+          $("#cari-kapal").show();
+        }else{
+          console.log(value)
+          $("#cari-kapal").hide();
+        }
+        });
+        $('#bendera').change(function(){
+          var value= $('select[name=bendera] option').filter(':selected').val()
+          console.log(value)
+          if(value=='wni'){
+            $("#cari-kapal").show();
+          }else{
+            console.log(value)
+            $("#cari-kapal").hide();
+          }
+          });
+          $('#pelanggaran').change(function(){
+            var value= $('select[name=pelanggaran] option').filter(':selected').val()
+            console.log(value)
+            if(value=='ada'){
+              $("#kesimpulan-pem").show();
+          
+
+            }else{
+              console.log(value)
+              $("#kesimpulan-pem").hide();
+
+            }
+            });  
+
+            $('#pelanggaran').ready(function(){
+              var value= $('select[name=pelanggaran] option').filter(':selected').val()
+              console.log(value)
+              if(value=='ada'){
+                $("#kesimpulan-pem").show();
+                $("#simpan").hide();
+                $("#berkas").show();
+  
+              }else{
+                console.log(value)
+                $("#kesimpulan-pem").hide();
+                $("#simpan").show();
+                $("#berkas").hide();
+              }
+              });  
+        $('.hapus').hide();
+        $("#tambah-saksi").click(function(){
+          var saksi=$("#saksi").clone().appendTo("#daftar-saksi");
+          $('.hapus').show();
+        });
+
+      $("#simpan-ppk").click(function(){
+        console.log("hallo")
+        swal("Data Berhasil Di Simpan", "Gambar Situasi Pengejaran Dan Penghentian Kapal", "success");
+      });
+      $("#simpan-penolakan").click(function(){
+        console.log("hallo")
+        swal("Data Berhasil Di Simpan", "Berita Acara Penolakan Penandatanganan", "success");
+      });
+
+    });
+
+   
+  </script>
+  <script>
+    var Component = function() {
+        var self = {
+            width: 400,
+            height: 200,
+            value: []
+        }
+     
+        var template = `
+            <div class="signature">
+                <Signature
+                    value="{{self.value}}"
+                    width="{{self.width}}"
+                    height="{{self.height}}"
+                    instructions="Please sign this document" />
+            </div>`;
+     
+        return lemonade.element(template, self, { Signature });
+    }
+    lemonade.render(Component, document.getElementById('root'));
+    </script>
+    <script>
+      var Component = function() {
+          var self = {
+              width: 400,
+              height: 200,
+              value: []
+          }
+       
+          var template = `
+              <div class="signature">
+                  <Signature
+                      value="{{self.value}}"
+                      width="{{self.width}}"
+                      height="{{self.height}}"
+                      instructions="Please sign this document" />
+              </div>`;
+       
+          return lemonade.element(template, self, { Signature });
+      }
+      lemonade.render(Component, document.getElementById('root1'));
+      </script>
+
+      <script>
+        var Component = function() {
+            var self = {
+                width: 400,
+                height: 200,
+                value: []
+            }
+         
+            var template = `
+                <div class="signature">
+                    <Signature
+                        value="{{self.value}}"
+                        width="{{self.width}}"
+                        height="{{self.height}}"
+                        instructions="Please sign this document" />
+                </div>`;
+         
+            return lemonade.element(template, self, { Signature });
+        }
+        lemonade.render(Component, document.getElementById('root2'));
+
+        var Component = function() {
+          var self = {
+              width: 400,
+              height: 200,
+              value: []
+          }
+       
+          var template = `
+              <div class="signature">
+                  <Signature
+                      value="{{self.value}}"
+                      width="{{self.width}}"
+                      height="{{self.height}}"
+                      instructions="Please sign this document" />
+              </div>`;
+       
+          return lemonade.element(template, self, { Signature });
+      }
+      lemonade.render(Component, document.getElementById('root5'));
+
+      var Component = function() {
+        var self = {
+            width: 400,
+            height: 200,
+            value: []
+        }
+     
+        var template = `
+            <div class="signature">
+                <Signature
+                    value="{{self.value}}"
+                    width="{{self.width}}"
+                    height="{{self.height}}"
+                    instructions="Please sign this document" />
+            </div>`;
+     
+        return lemonade.element(template, self, { Signature });
+    }
+    lemonade.render(Component, document.getElementById('root6'));
+
+    var Component = function() {
+      var self = {
+          width: 400,
+          height: 200,
+          value: []
+      }
+   
+      var template = `
+          <div class="signature">
+              <Signature
+                  value="{{self.value}}"
+                  width="{{self.width}}"
+                  height="{{self.height}}"
+                  instructions="Please sign this document" />
+          </div>`;
+   
+      return lemonade.element(template, self, { Signature });
+  }
+  lemonade.render(Component, document.getElementById('root7'));
+  var Component = function() {
+    var self = {
+        width: 400,
+        height: 200,
+        value: []
+    }
+ 
+    var template = `
+        <div class="signature">
+            <Signature
+                value="{{self.value}}"
+                width="{{self.width}}"
+                height="{{self.height}}"
+                instructions="Please sign this document" />
+        </div>`;
+ 
+    return lemonade.element(template, self, { Signature });
+}
+lemonade.render(Component, document.getElementById('root8'));
+        </script>
+  
+  
+</body>
+</html>

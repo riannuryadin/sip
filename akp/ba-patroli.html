@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; SIP-PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../assets/modules/jquery-selectric/selectric.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+              </ul>
+            </li>
+          </ul>  
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Laporan Hasil Pelaksanaan Patroli/Perondaan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Patroli/Perondaan</a></div>
+              <div class="breadcrumb-item"><a href="#">Laporan Hasil</a></div>
+              <div class="breadcrumb-item">Input Laporan</div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h4>Input Laporan Hasil Pelaksanaan Patroli/Perondaan</h4>
+            </div>
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Nomor Surat</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control purchase-code" placeholder="0001-2222-0808-2022">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="unitKerja" class="col-sm-3 col-form-label">Nama Unit Kerja</label>
+                <div class="col-sm-9">
+                  <select class="form-control select2">
+                    <option>Unit Kerja 1</option>
+                    <option>Unit Kerja 2</option>
+                    <option>Unit Kerja 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="tanggal" class="col-sm-3 col-form-label">Tanggal / Hari</label>
+                <div class="col-sm-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-calendar"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control datepicker">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" placeholder="Otomatis Saat Pilih Tanggal">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                <div class="col-sm-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-clock"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control timepicker">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <select class="form-control select2">
+                    <option>WIB</option>
+                    <option>WITA</option>
+                    <option>WIT</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Dasar/Perintah</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control purchase-code" placeholder="Tergenerate sesuai surat tugas yang dipilih">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Lokasi Patroli</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control purchase-code">
+                </div>
+              </div>
+            </div>
+
+            <div class="card-header">
+              <h4>Petugas Patroli/Perondaan</h4>
+            </div>
+            <div class="card-body">
+              <div class="form-group row">
+                <label for="unitKerja" class="col-sm-3 col-form-label">Nama Petugas</label>
+                <div class="col-sm-9">
+                  <select class="form-control select2">
+                    <option>Petugas 1</option>
+                    <option>Petugas 2</option>
+                    <option>Petugas 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="nomorRegistrasi" class="col-sm-3 col-form-label">NIP Petugas </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control purchase-code" placeholder="NIP Tergenerate Saat Memilih Nama Petugas">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="nomorRegistrasi" class="col-sm-3 col-form-label">No. KTA Polsus </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control purchase-code">
+                </div>
+              </div>
+              <p >
+                <a class="btn btn-secondary text-right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Tambah Petugas
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="form-group row">
+                  <label for="unitKerja" class="col-sm-3 col-form-label">Nama Petugas</label>
+                  <div class="col-sm-9">
+                    <select class="form-control select2">
+                      <option>Petugas 1</option>
+                      <option>Petugas 2</option>
+                      <option>Petugas 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">NIP Petugas </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control purchase-code" placeholder="NIP Tergenerate Saat Memilih Nama Petugas">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">No. KTA Polsus </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control purchase-code">
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+
+              <div class="card-header">
+                <h4>Hasil Patroli/Perondaan</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Hasil Temuan</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Posisi Temuan (Titik Koordinat/Wilayah Administrasi)</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control purchase-code">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Titik</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control purchase-code">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Bujur</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Derajat">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Menit">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Detik">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Lintang</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Derajat">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Menit">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Detik">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                  <div class="col-sm-9">
+                    <p>
+                      <a class="btn btn-secondary" data-toggle="collapse" href="#collapseTitik" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Tambah Titik
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="collapse" id="collapseTitik">
+                  
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Titik</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Bujur</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Derajat">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Menit">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Detik">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Lintang</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Derajat">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Menit">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="Detik">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Tindakan yang Diambil</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control purchase-code">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Kesimpulan</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Saran dan Tindak Lanjut</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseGambar" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Upload Gambar dan Video
+                  </a>
+                </p>
+                <div class="collapse" id="collapseGambar">
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Gambar</label>
+                    <div class="col-sm-7">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      .jpg/ .jpeg/ .png
+                      maksimal file 150Mb
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                      <div class="buttons">
+                        <a href="#" class="btn btn-icon icon-left btn-secondary"> Tambah Gambar</a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Video</label>
+                    <div class="col-sm-7">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      .mp4/ .avi/ .mkv
+                      maksimal file 250Mb
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                      <div class="buttons">
+                        <a href="#" class="btn btn-icon icon-left btn-secondary"> Tambah Video</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card-footer text-right">
+                <div class="buttons">
+                  <a href="hasil_operasi.html" class="btn btn-icon icon-left btn-secondary mr-2"> kembali</a>
+                  <a href="hasil_operasi.html" class="btn btn-icon icon-left btn-primary"> Simpan</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="../assets/modules/jquery.min.js"></script>
+  <script src="../assets/modules/popper.js"></script>
+  <script src="../assets/modules/tooltip.js"></script>
+  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../assets/modules/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="../assets/modules/cleave-js/dist/cleave.min.js"></script>
+  <script src="../assets/modules/cleave-js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+</body>
+</html>

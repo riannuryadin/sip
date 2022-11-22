@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; SIP-PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="../assets/modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../assets/modules/codemirror/theme/duotone-dark.css">>
+  <link rel="stylesheet" href="../assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../assets/modules/jquery-selectric/selectric.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time text-primary">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="far fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Rutin)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
+                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian kapal yg ditangkap</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">Berita Acara Hasil Pemeriksaan</a></li>
+              </ul>
+            </li>
+          </ul>  
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Rencana Operasi Kapal Pengawas Perikanan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Pengaduan/Laporan</a></div>
+              <div class="breadcrumb-item"><a href="#">Input Penerimaan</a></div>
+              <div class="breadcrumb-item">Tambah Data</div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h4>Tambah Rencana Operasi Kapal Pengawas Perikanan</h4>
+            </div>
+            <div class="card-body">
+                  <div class="row mt-4">
+                    <div class="col-12 col-lg-8 offset-lg-2">
+                      <div class="wizard-steps">
+                        <div class="wizard-step">
+                          <div class="wizard-step-icon">
+                            <i class=" fas fa-calendar"></i>
+                          </div>
+                          <div class="wizard-step-label">
+                          Sasaran/Fokus Operasi
+                          </div>
+                        </div>
+                        <div class="wizard-step">
+                          <div class="wizard-step-icon">
+                            <i class="fas fa-map"></i>
+                          </div>
+                          <div class="wizard-step-label">
+                          Peta Operasi
+                          </div>
+                        </div>
+                        <div class="wizard-step wizard-step-active">
+                          <div class="wizard-step-icon">
+                            <i class="fas fa-thin fa-ship"></i>
+                          </div>
+                          <div class="wizard-step-label">
+                          Analisis Indikasi Kerawanan
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                      <h6>Analisis Indikasi Kerawanan</h6><br>
+                    </div>
+                    <div class="form-group row">
+                      <label  for="tanggal" class="col-sm-3 col-form-label">1. Analisis posisi kapal perikanan menggunakan Automatic Identification System(AIS)</label>
+                      <div class="col-sm-6">
+                        <div id="image-preview" class="image-preview">
+                          <label for="image-upload" id="image-label">Choose File</label>
+                          <input type="file" name="image" id="image-upload" />
+                        </div>
+                      <span>Tambah Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                      </div>
+                    </div>
+                    <div id="kapal">
+                    <div class="card bg-light" id="koordinat-kapal1">
+                      <div class="card-header">Koordinat Kapal</div>
+                        <div class="card-body">
+                            <textarea rows="10" style="width: 100%;"></textarea>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="form-group row">
+                        <label  for="tanggal" class="col-sm-3 col-form-label">2. Analisis posisi kapal perikanan Berbendera Indonesia menggunakan vessel monitoring system(vms)</label>
+                        <div class="col-sm-6">
+                          <div id="image-preview" class="image-preview">
+                            <label for="image-upload" id="image-label">Choose File</label>
+                            <input type="file" name="image" id="image-upload" />
+                          </div>
+                        <span>Tambah Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                        </div>
+                      </div>
+                      <div id="kapal">
+                        <div class="card bg-light" id="koordinat-kapal1">
+                          <div class="card-header">Koordinat Kapal</div>
+                            <div class="card-body">
+                                <textarea rows="10" style="width: 100%;"></textarea>
+                            </div>
+                          </div>
+                          </div>
+                        <div class="form-group row">
+                          <label  for="tanggal" class="col-sm-3 col-form-label">3. Analisis Daerah Rawan Pelanggaran menggunakan Data Hasil Pemantauan Air Surveilance</label>
+                          <div class="col-sm-6">
+                            <div id="image-preview" class="image-preview">
+                              <label for="image-upload" id="image-label">Choose File</label>
+                              <input type="file" name="image" id="image-upload" />
+                            </div>
+                          <span>Tambah Foto dengan format JPEG atau PNG ukuran maks 5 MB</span>
+                          </div>
+                        </div>
+                        <div id="kapal">
+                          <div class="card bg-light" id="koordinat-kapal1">
+                            <div class="card-header">Koordinat Kapal</div>
+                              <div class="card-body">
+                                  <textarea rows="10" style="width: 100%;"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                      <div class=" btn-group row">
+                        <a href="tambah_rencana_operasi_b.html"><button class="btn btn-secondary mr-2" type="reset">Kembali</button></a>
+                        <a href="rencana_operasi.html"><button class="btn btn-primary" type="submit">Simpan</button></a>
+                      </div>
+                    <div class="tab-pane fade" id="lokasi2" role="tabpanel" aria-labelledby="lokasi-tab2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="../assets/modules/jquery.min.js"></script>
+  <script src="../assets/modules/popper.js"></script>
+  <script src="../assets/modules/tooltip.js"></script>
+  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../assets/modules/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="../assets/modules/cleave-js/dist/cleave.min.js"></script>
+  <script src="../assets/modules/cleave-js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="../assets/modules/upload-preview/assets/js/jquery.uploadPreview.min.js"></script>
+  <script src="../assets/js/page/features-post-create.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#tambah-kapal").click(function(){
+        $("#koordinat-kapal1").clone().appendTo("#kapal");
+      });
+      $('#jenis-kor').change(function(){
+        var value= $('select[name=jenis-kor] option').filter(':selected').val()
+        console.log(value)
+        if(value=='dms'){
+          $("#dms-form").show();
+          $("#lat-form").hide();
+          $("#utm-form").hide();
+        }else if(value=='lat'){
+          console.log(value)
+          $("#dms-form").hide();
+          $("#lat-form").show();
+          $("#utm-form").hide();
+        }else if(value='utm'){
+          console.log(value)
+          $("#dms-form").hide();
+          $("#lat-form").hide();
+          $("#utm-form").show();
+        }
+      });
+      $('#jenis-kor').ready(function(){
+        var value= $('select[name=jenis-kor] option').filter(':selected').val()
+        console.log(value)
+        if(value=='dms'){
+          $("#dms-form").show();
+          $("#lat-form").hide();
+          $("#utm-form").hide();
+        }else if(value=='lat'){
+          console.log(value)
+          $("#dms-form").hide();
+          $("#lat-form").show();
+          $("#utm-form").hide();
+        }else if(value='utm'){
+          console.log(value)
+          $("#dms-form").hide();
+          $("#lat-form").hide();
+          $("#utm-form").show();
+        }
+      });
+    });
+    
+  </script>
+</body>
+</html>

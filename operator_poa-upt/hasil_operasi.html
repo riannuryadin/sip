@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Dashboard &mdash; SIP-PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="../assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="../assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="../assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time text-primary">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="far fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Rutin)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Inspeksi Lapangan (Insidental)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Rian Nuryadin</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Operasi Pengawasan Kapal Perikanan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="target_operasi.html">Target Operasi</a></li>
+                <li><a class="nav-link" href="rencana_operasi.html">Rencana Operasi</a></li>
+                <li><a class="nav-link" href="hasil_operasi.html">Hasil Operasi</a></li>
+                <li><a class="nav-link" href="lihat_bap.html">BA Hasil Pemeriksaan</a></li>
+                <li><a class="nav-link" href="rincian_kapal_tangkap.html">Rincian Kapal yg ditangkap</a></li>
+              </ul>
+            </li>
+          </ul>  
+      </div>
+
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Hasil Operasi Kapal Pengawas Perikanan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Pengaduan/Laporan</a></div>
+              <div class="breadcrumb-item">Input Penerimaan</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
+                      <h6 class="m-3">Filter Data</h6>
+                        <div class="form-row m-3">
+                            <div class="col col-sm">
+                              <form>
+                                  <label>Tanggal mulai</label>
+                                  <input type="text" class="form-control datepicker">
+                            </div>
+                            <div class="col col-sm">
+                              <label>Tanggal akhir</label>
+                                  <input type="text" class="form-control datepicker">
+                            </div>
+                            <div class="col col-sm">
+                              <label>Kapal Pengawas</label>
+                              <select class="form-control select2">
+                                <option>--kapal pengawas--</option>
+                                <option>Hiu 15</option>
+                                <option>Hiu 13</option>
+                              </select>
+                            </div>
+                            <div class="col col-sm">
+                              <button class="btn btn-primary mt-4"><i class="fa fa-search"></i> cari</button>
+                            </form>
+                            </div>
+                        </div>
+                          <div class="form-row ml-3 mr-3 mb-3">
+                            <div class="col-9">
+                              <label>cari semua disini</label>
+                              <input type="text" class="form-control" placeholder="cari semua disini...">
+                            </div>
+                          </div>
+                      </div>
+                      <div class="row m-3">
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke excel</button>
+                            <button class="btn btn-sm btn-outline-success m-1"><i class="fa fa-file-excel"></i> export ke csv</button>
+                            <button class="btn btn-sm btn-outline-danger m-1"><i class="fa fa-file-pdf"></i> cetak pdf</button>
+                            </div>
+                        </div>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-md">
+                        <tr>
+                          <th>No.</th>
+                          <th>Tangal Penugasan</th>
+                          <th>Nama Kapal Pengawas</th>
+                          <th>Nakoda Kapal</th>
+                          <th>Awak kapal</th>
+                          <th>Wilayah Operasi</th>
+                          <th>Fokus/Target Operasi</th>
+                          <th>BAP</th>
+                          <th>Pelanggaran</th>
+                          <th>Aksi</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>22 Sep 2022 s/d 25 Sep 2022</td>
+                          <td>HIU 15</td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          <td>WPPNRI 711 Laut Natuna Utara</td>
+                          <td>
+                            <ul>
+                              <li>Operasional Kapal Asing asal vietnam</li>
+                              <li>Validasi ketaatan KII > 30 GT Terhadap SPKP</li>
+                            </ul>
+                          </td>
+                          <td><div class="badge badge-warning">Belum di isi</div></td>
+                          <td><div class="badge badge-warning">Belum ditemukan</div></td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <a href="tambah_rencana_operasi.html"><button class="btn btn-sm btn-outline-info m-2">Lihat rencana operasi</button></a>
+                             
+                              <a href="lihat_bap.html"><button class="btn btn-sm btn-outline-info m-2">Lihat Berita Acara Hasil Pemeriksaan</button></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>22 Sep 2022 s/d 25 Sep 2022</td>
+                          <td>HIU 15</td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          <td>WPPNRI 711 Laut Natuna Utara</td>
+                          <td>
+                            <ul>
+                              <li>Operasional Kapal Asing asal vietnam</li>
+                              <li>Validasi ketaatan KII > 30 GT Terhadap SPKP</li>
+                            </ul>
+                          </td>
+                          <td><div class="badge badge-success">Sudah di isi</div></td>
+                          <td><div class="badge badge-success"> Tidak ditemukan</div>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <a href="tambah_rencana_operasi.html"><button class="btn btn-sm btn-outline-info m-2">Lihat rencana operasi</button></a>
+                              <a href="lihat_bap.html"><button class="btn btn-sm btn-outline-info m-2">Lihat Berita Acara Hasil Pemeriksaan</button></a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>22 Sep 2022 s/d 25 Sep 2022</td>
+                          <td>HIU 15</td>
+                          <td>Rian Nuryadin</td>
+                          <td>
+                            <ul>
+                              <li>Raka</li>
+                              <li>Dadan</li>
+                              <li>Fitu</li>
+                            </ul>
+                          </td>
+                          <td>WPPNRI 711 Laut Natuna Utara</td>
+                          <td>
+                            <ul>
+                              <li>Operasional Kapal Asing asal vietnam</li>
+                              <li>Validasi ketaatan KII > 30 GT Terhadap SPKP</li>
+                            </ul>
+                          </td>
+                          <td><div class="badge badge-success">Sudah di isi</div></td>
+                          <td><div class="badge badge-danger">Ditemukan Pelanggaran</div></td></td>
+                          <td>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                              <a href="tambah_rencana_operasi.html"><button class="btn btn-sm btn-outline-info m-2">Lihat rencana operasi</button></a>
+                              <a href="lihat_bap.html"><button class="btn btn-sm btn-outline-info m-2">Lihat Berita Acara Hasil Pemeriksaan</button></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    </div>
+                  <!-- <div class="card-footer text-right">
+                    <nav class="d-inline-block">
+                      <ul class="pagination mb-0">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="main-content">
+        <!-- Modal -->
+        <div class="modal fade" id="pilih-bap" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Jenis Berita Acara Hasil Pemeriksaan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="card-body">
+                    <select id="but-bap" name="buat-bap" class="select2" style="width:100%">
+                      <option value="sdp">Sumber Daya Perikanan</option>
+                      <option value="sdk">Sumber Daya Kelautan</option>
+                    </select>
+                  </div>
+                </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
+                <div id="bap-sdp">
+                <a href="bap_sdp.html" ><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+                </div>
+                <div id="bap-sdk">
+                <a href="ba-patroli.html"><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="../assets/modules/jquery.min.js"></script>
+  <script src="../assets/modules/popper.js"></script>
+  <script src="../assets/modules/tooltip.js"></script>
+  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="../assets/modules/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="../assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="../assets/modules/chart.min.js"></script>
+  <script src="../assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="../assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="../assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="../assets/modules/prism/prism.js"></script>
+  <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
+
+
+
+  <!-- JS Libraies -->
+  <script src="../assets/modules/prism/prism.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index-0.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/bootstrap-modal.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#pilih-bap').ready(function(){
+        var value= $('select[name=buat-bap] option').filter(':selected').val()
+        console.log(value)
+        if(value=="sdp"){
+          $("#bap-sdp").show();
+          $("#bap-sdk").hide();
+        }else {
+          console.log(value)
+          $("#bap-sdp").hide();
+          $("#bap-sdk").show();
+        }
+        });
+        $('#pilih-bap').change(function(){
+          var value= $('select[name=buat-bap] option').filter(':selected').val()
+          console.log(value)
+          if(value=="sdp"){
+            $("#bap-sdp").show();
+            $("#bap-sdk").hide();
+          }else {
+            console.log(value)
+            $("#bap-sdp").hide();
+            $("#bap-sdk").show();
+          }
+          });
+    });
+  </script>
+</body>
+</html>
