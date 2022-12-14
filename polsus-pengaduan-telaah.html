@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl.perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="polsus-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengaduan.html"> Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="polsus-rekomendasi.html">Data Rekomendasi</a></li>
+                <li><a class="nav-link" href="polsus-penolakan.html">Data Penolakan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengawasan.html">Pengawasan baru</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-kkprl.html">Data Inspeksi KKRPL</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Penerimaan Pengaduan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Pengaduan</a></div>
+              <div class="breadcrumb-item">Pengaduan Baru</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Daftar Pengaduan Laporan Masyarakat</h4>
+                  <div class="card-header-form">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label >Filter data sesuai kategori : </label>
+                  <div class="form-group row">
+                    <div class="col-sm-4">
+                      <select class="form-control selectric" id="jenis" name="kategori" >
+                        <option value="1"> Bulan </option>
+                        <option value="2"> Unit Kerja</option>
+                        <option value="3"> Saluran Pengaduan</option>
+                        <option value="4"> Status Pengaduan</option>
+                      </select>
+                    </div>
+                    <div id="1-form" class="col-sm-4">
+                      <select class="form-control selectric">
+                        <option>Januari</option>
+                        <option>Februari</option>
+                        <option>Maret</option>
+                        <option>April</option>
+                        <option>Mei</option>
+                        <option>Juni</option>
+                        <option>Juli</option>
+                        <option>Agustus</option>
+                      </select>
+                    </div>
+                    <div id="2-form" class="col-sm-4">
+                      <select class="form-control selectric">
+                        <option>Belawan</option>
+                        <option>Tarakan</option>
+                        <option>Pontianak</option>
+                        <option>Kupang</option>
+                        <option>Ambon</option>
+                      </select>
+                    </div>
+                    <div id="3-form" class="col-sm-4">
+                      <select class="form-control selectric">
+                        <option>Media Sosial</option>
+                        <option>Email</option>
+                        <option>Surat Resmi Instansi Lain</option>
+                        <option>SMS Gateway</option>
+                        <option>Portal Berita</option>
+                      </select>
+                    </div>
+                    <div id="4-form" class="col-sm-4">
+                      <select class="form-control selectric">
+                        <option>Baru</option>
+                        <option>Diterima</option>
+                        <option>Ditelaah</option>
+                        <option>Diterima</option>
+                        <option>Belum Ditelaah</option>
+                        <option>Sudah Ditelaah</option>
+                        <option>Direkomendasikan</option>
+                        <option>Ditolak</option>
+                      </select>
+                    </div>
+                    <div class="buttons">
+                      <a href="#" class="btn btn-icon icon-left btn-primary"> Tampilkan</a>
+                    </div>
+                  </div>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="semua-tab" data-toggle="tab" href="#semua" role="tab" aria-controls="semua" aria-selected="false">Semua</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="baru-tab" data-toggle="tab" href="#baru" role="tab" aria-controls="Baru" aria-selected="false">Baru</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="belum-tab" data-toggle="tab" href="#belum" role="tab" aria-controls="diterima" aria-selected="false"> Belum Ditelaah</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="ditelaah-tab" data-toggle="tab" href="#ditelaah" role="tab" aria-controls="ditelaah" aria-selected="true"> Sudah Ditelaah</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="direkomendasikan-tab" data-toggle="tab" href="#direkomendasikan" role="tab" aria-controls="direkomendasikan" aria-selected="false">Direkomendasikan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="ditindaklanjuti-tab" data-toggle="tab" href="#ditindaklanjuti" role="tab" aria-controls="ditelaah" aria-selected="false">Ditindaklanjuti</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="ditolak-tab" data-toggle="tab" href="#ditolak" role="tab" aria-controls="ditolak" aria-selected="false">Ditolak</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade" id="semua" role="tabpanel" aria-labelledby="semua-tab">
+                      <br>
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <tr>
+                            <th>No.</th>
+                            <th>No. Registrasi</th>
+                            <th>Unit Kerja</th>
+                            <th>Tanggal Pengaduan</th>
+                            <th>Saluran Pengaduan</th>
+                              <th>Status Pengaduan</th>
+                              <th>Detail Pengaduan</th>
+                              <th>Aksi</th>
+                              <th>Tanda Terima</th>
+                              <th>Response Time</th> 
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>01/PSDKP/VII/2022</td>
+                            <td>Belawan</td>
+                            <td>2017-01-09</td>
+                            <th>Langsung</th>
+                              <td><div class="badge badge-warning">Baru</div></td>
+                              <td>
+                                <a href="polsus-detail-langsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                              </td>
+                              <td>
+                                <button class="btn btn-sm btn-outline-success" data-toggle="modal" data-target="#ModalTandaTerima"><i class="fas fa-info-circle"></i>  Buat Tanda Terima</button>
+                              </td>
+                              <td></td>
+                              <td>5 Jam Lalu (Ditambahkan)</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                              <th>Email</th>
+                            <td><div class="badge badge-success">Belum Ditelaah</div></td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td>
+                              <a href="polsus-telaah.html" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i> Buat Telaah</a>
+                              <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#ModalPemberitahuan"><i class="fas fa-paper-plane"></i> Kirim Pemberitahuan</button>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>2 Hari Lalu </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                              <th>SMS Gateway</th>
+                            <td><div class="badge badge-info">Sudah Ditelaah</div></td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td><a href="detail-rekomendasi.html" class="btn btn-sm btn-outline-success"><i class="fas fa-paper-plane"></i> Kirim Rekomendasi</a></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>5 Detik Lalu (Ditelaah)</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                            <th>Surat Resmi Instansi Lain</th>
+                            <td><div class="badge badge-primary">Direkomendasikan</div></td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td><a href="polsus-rekomendasi.html" class="btn btn-sm btn-outline-success"><i class="fas fa-info-circle"></i> Lihat Rekomendasi</a></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>1 Minggu Lalu (Ditelaah)</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                              <th>Langsung</th>
+                            <td><div class="badge badge-secondary">Ditindaklanjuti</div></td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td><a href="polsus-pengawasan.html" class="btn btn-sm btn-outline-success"><i class="fas fa-info-circle"></i> Lihat Pengawasan</a></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>1 Minggu Lalu (Ditelaah)</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                              <th>Social Media</th>
+                            <td><div class="badge badge-danger">Ditolak</div></td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td><a href="detail-penolakan.html" class="btn btn-sm btn-outline-success"><i class="fas fa-paper-plane"></i> Kirim Penolakan</a></td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>1 Bulan Lalu (Ditolak)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="baru" role="tabpanel" aria-labelledby="baru-tab">
+                      <br>
+                      <p>
+                        Pengaduan sudah dibuatkan tanda terima
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="belum" role="tabpanel" aria-labelledby="belum-tab">
+                      <br>
+                      <p>
+                        Pengaduan sudah dilakukan telaah
+                      </p>
+                    </div>
+                    <div class="tab-pane fade show active" id="ditelaah" role="tabpanel" aria-labelledby="ditelaah-tab">
+                      <br>
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <tr>
+                            <th>No.</th>
+                            <th>No. Registrasi</th>
+                            <th>Unit Kerja</th>
+                            <th>Tanggal Pengaduan</th>
+                            <th>Saluran Pengaduan</th>
+                              <th>Status Pengaduan</th>
+                              <th>Aksi</th>
+                              <th>Detail Pengaduan</th>
+                              <th>Tanda Terima</th>
+                              <th>Response Time</th> 
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>01/PSDKP/VII/2022</td>
+                              <td>Belawan</td>
+                              <td>2017-01-09</td>
+                              <th>SMS Gateway</th>
+                            <td><div class="badge badge-success">Sudah Ditelaah</div></td>
+                            <td>
+                              <a href="detail-rekomendasi.html" class="btn btn-sm btn-outline-success"><i class="fas fa-paper-plane"></i> Kirim Rekomendasi</a>
+                            </td>
+                            <td>
+                              <a href="polsus-detail-tidaklangsung.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#TandaTerima"><i class="fas fa-file"></i> Download PDF</button>
+                            </td>
+                            <td>5 Detik Lalu (Ditelaah)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="direkomendasikan" role="tabpanel" aria-labelledby="direkomendasikan-tab">
+                      <br>
+                      <p>
+                        Pengaduan hasil telaah belum direkomendasikan
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="ditindaklanjuti" role="tabpanel" aria-labelledby="ditindaklanjuti-tab">
+                      <br>
+                      <p>
+                        Pengaduan belum ditindaklanjuti
+                      </p>
+                    </div>
+                    <div class="tab-pane fade" id="ditolak" role="tabpanel" aria-labelledby="ditolak-tab">
+                      <br>
+                      <p>
+                        Pengaduan belum dinyatakan ditolak
+                      </p>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal fade" tabindex="-1" role="dialog" id="ModalTandaTerima">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Preview Tanda Terima Laporan Pengaduan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <img alt="image" src="assets/img/tanda-terima.png" class="img-fluid">
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <a href="polsus-tambah-pengaduan.html" class="btn btn-icon icon-left btn-warning"></i> Edit</a>
+                <a href="polsus-pengaduan-belum.html" class="btn btn-icon icon-left btn-primary"></i> Generate Tanda Terima</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="TandaTerima">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Preview Tanda Terima Laporan Pengaduan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <img alt="image" src="assets/img/tanda-terima.png" class="img-fluid">
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="ModalPemberitahuan">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Pengiriman Notifikasi ke Pelapor/Pengadu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p>Pemberitahuan sudah dikirimkan melalui SMS Gateway</p>
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <a href="polsus-pengaduan-belum.html" class="btn btn-icon icon-left btn-secondary"></i> Oke</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+  <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/components-table.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#jenis').ready(function(){
+        var value=$('select[name=kategori] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#1-form").show();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").show();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '3'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").show();
+          $("#4-form").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").show();
+        }
+      });
+      $('#jenis').change(function(){
+        var value=$('select[name=kategori] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#1-form").show();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").show();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '3'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").show();
+          $("#4-form").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").show();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl.perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="operator-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengaduan.html">Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="operator-rekomendasi.html">Data Rekomendasi </a></li>
+                <li><a class="nav-link" href="operator-penolakan.html">Data Penolakan </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengawasan.html">Pengawasan Baru</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-kkprl.html">Data Inspeksi KKPRL</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Detail Penolakan Pengaduan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="polsus-pengaduan.html">Pengaduan</a></div>
+              <div class="breadcrumb-item"><a href="polsus-rekomendasi.html"></a>Penolakan</div>
+              <div class="breadcrumb-item">Detail Penolakan</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Data Penolakan Hasil Telaah/Verifikasi</h4>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data Hasil Telaah</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pelapor-tab" data-toggle="tab" href="#pelapor" role="tab" aria-controls="pelapor" aria-selected="false">Identitas Pelapor</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="dugaan-tab" data-toggle="tab" href="#dugaan" role="tab" aria-controls="dugaan" aria-selected="false">Dugaan Perusakan/Pelanggaran</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+                      <br>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Petugas Telaah/Verifikator</label>
+                        <div class="col-sm-9">
+                          : Agus Heryanto
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Unit Kerja</label>
+                        <div class="col-sm-9">
+                          : UPT Pangkalan Jakarta 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Tanggal / Hari</label>
+                        <div class="col-sm-3">
+                          : 21 November 2022 
+                        </div>
+                        <div class="col-sm-3">
+                          / Senin
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-3">
+                          : 12.10
+                        </div>
+                        <div class="col-sm-3">
+                          / WITA
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Status Penolakan</label>
+                        <div class="col-sm-9">
+                          <div class="badge badge-warning">Belum Disetujui</div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Download Surat Penolakan</label>
+                        <div class="col-sm-9">
+                          : -
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pelapor" role="tabpanel" aria-labelledby="pelapor-tab">
+                      <br>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama/ Sumber Aduan</label>
+                        <div class="col-sm-3">
+                          : Didit Eko Prasetyo
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">No. Telepon</label>
+                        <div class="col-sm-9">
+                          : 081920205959 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Alamat</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Desa : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kec. : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Prov : Banten
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Bentuk Aduan</label>
+                        <div class="col-sm-9">
+                          : Langsung
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Saluran Pengaduan</label>
+                        <div class="col-sm-9">
+                          : -
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Sumber Aduan atau Laporan</label>
+                        <div class="col-sm-9">
+                          : Perorangan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="dugaan" role="tabpanel" aria-labelledby="dugaan-tab">
+                      <br>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Deskrispi Pelanggaran</label>
+                        <div class="col-sm-9">
+                          : Pemanfaatan ruang yang tidak mematuhi ketentuan dalam kesesuaian kegiatan pemanfaatan ruang laut (pelanggaran jalur penggelaran kabel bawah laut)
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Pihak yang diduga melakukan pelanggaran</label>
+                        <div class="col-sm-9">
+                          : PT Titi Mangsa Indonesia
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Waktu Pelanggaran</label>
+                        <div class="col-sm-3">
+                          : 21 November 2022 
+                        </div>
+                        <div class="col-sm-3">
+                          Pukul : 13.00/WITA
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Desa : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kec. : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Prov : Banten
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Data Dukung</label>
+                        <div class="col-sm-3">
+                          : -
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Terdapat kriteria yang dilanggar</label>
+                        <div class="col-sm-3">
+                          : Tidak Ada
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Deskrispi/Alasan Penolakan</label>
+                        <div class="col-sm-9">
+                          : Kekurangan bukti dan laporan tidak masuk akal
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <div class="buttons">
+                    <a href="polsus-penolakan.html" class="btn btn-secondary"> Kembali</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+  <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/components-table.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>

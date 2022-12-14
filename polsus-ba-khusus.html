@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+  <link rel="stylesheet" href="assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Pengaduan Baru (3)
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan-atasan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Penolakan Baru (1)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="rekomendasi-atasan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Rekomendasi Inspeksi Baru (4)
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="laporan-atasan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Laporan Inspeksi Baru (5)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="laporan-patroli" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Laporan Patroli Baru (2)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl.perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="polsus-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengaduan.html"> Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="polsus-rekomendasi.html">Data Rekomendasi</a></li>
+                <li><a class="nav-link" href="polsus-penolakan.html">Data Penolakan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengawasan.html">Pengawasan baru</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-kkprl.html">Data Inspeksi KKRPL</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Berita Acara Pengawasan Khusus Pemanfaatan Ruang Laut</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="#">Pengawasan</a></div>
+              <div class="breadcrumb-item"><a href="#">Pengawasan Khusus</a></div>
+              <div class="breadcrumb-item">Input Berita Acara</div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header">
+              <h4>Input Berita Acara Pengawasan Khusus</h4>
+            </div>
+            <div class="card-body">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data Inspeksi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="petugas-tab" data-toggle="tab" href="#petugas" role="tab" aria-controls="petugas" aria-selected="false">Kehadiran Petugas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pengamatan-tab" data-toggle="tab" href="#pengamatan" role="tab" aria-controls="pengamatan" aria-selected="false">Pengamatan Dilapangan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pelaku-tab" data-toggle="tab" href="#pelaku" role="tab" aria-controls="pelaku" aria-selected="false">Pelaku Usaha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="kegiatan-tab" data-toggle="tab" href="#kegiatan" role="tab" aria-controls="kegiatan" aria-selected="false">Kegiatan Pemeriksaan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="tambahan-tab" data-toggle="tab" href="#tambahan" role="tab" aria-controls="tambahan" aria-selected="false">Data Tambahan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="verifikasi-tab" data-toggle="tab" href="#verifikasi" role="tab" aria-controls="verifikasi" aria-selected="false">Verifikasi/Persetujuan</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Unit Kerja </label>
+                    <div class="col-sm-9">
+                      : Pangkalan UPT Jakarta
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">No. Registrasi Pengaduan</label>
+                    <div class="col-sm-3">
+                      : <a href="detail-pengaduan-langsung.html">01/PSDKP/VII/2022</a>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Nomor </label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code" placeholder="001/PSDKP.3/POLSUSPWP3K/VII/2022 (nomor otomatis tergenerate sistem)">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal / Hari</label>
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control datepicker">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" placeholder="Hari" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="fas fa-clock"></i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control timepicker">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="form-control select2">
+                        <option>WIB</option>
+                        <option>WITA</option>
+                        <option>WIT</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="petugas" role="tabpanel" aria-labelledby="petugas-tab">
+                  <br>
+                  <div class="form-group row">
+                    <div class="col-sm-9">
+                      <h6>Daftar Petugas</h6>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <tr>
+                        <th>
+                          <div class="custom-checkbox custom-control text-center">
+                            <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
+                            <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </th>
+                        <th>No</th>
+                          <th>NIP</th>
+                          <th>Nama Petugas</th>
+                          <th>Jabatan</th>
+                          <th>Instansi</th>
+                      </tr>
+                      <tr>
+                        <td class="p-0 text-center">
+                          <div class="custom-checkbox custom-control">
+                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                            <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </td>
+                        <td>1</td>
+                          <td>32152891808456</td>
+                          <td>Hasan Basri</td>
+                          <td>Polsus</td>
+                          <td>Pangkalan UPT Jakarta</td>
+                      </tr>
+                      <tr>
+                        <td class="p-0 text-center">
+                          <div class="custom-checkbox custom-control">
+                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                            <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </td>
+                        <td>2</td>
+                          <td>32152891808921</td>
+                          <td>Irwansyah Saputra</td>
+                          <td>Polsus</td>
+                          <td>Pangkalan UPT Jakarta</td>
+                      </tr>
+                      <tr>
+                        <td class="p-0 text-center">
+                          <div class="custom-checkbox custom-control">
+                            <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                            <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </td>
+                        <td>3</td>
+                          <td>32152891808921</td>
+                          <td>Kusnadi</td>
+                          <td>Polsus</td>
+                          <td>Pangkalan UPT Jakarta</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="form-group row">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#ModalPemberitahuan"> Simpan Kehadiran</button>
+                    <label class="col-sm-6 col-form-label">*) Silahkan checklist terlebih dahulu untuk petugas yang hadir pengawasan</label>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pengamatan" role="tabpanel" aria-labelledby="pengamatan-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Terdapat perubahan negatif fungsi lingkungan</label>
+                    <div class="col-sm-9">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="kegiatan" id="kegiatan1" >
+                        <label class="form-check-label" for="kegiatan1">
+                          Ya
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="kegiatan" id="kegiatan2" >
+                        <label class="form-check-label" for="kegiatan2">
+                          Tidak
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Bidang Terdampak</label>
+                    <div class="col-sm-9">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Lingkungan</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Sosial</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">EKonomi</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Luas Area Terdampak</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control purchase-code">
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="">Ha</label>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Intensitas/Frekuensi</label>
+                    <div class="col-sm-9">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="kegiatan" id="kegiatan1" >
+                        <label class="form-check-label" for="kegiatan1">
+                          Tinggi
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="kegiatan" id="kegiatan2" >
+                        <label class="form-check-label" for="kegiatan2">
+                          Sedang
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="kegiatan" id="kegiatan2" >
+                        <label class="form-check-label" for="kegiatan2">
+                          Rendah
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Jangka Waktu Terdampak</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control purchase-code">
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="">Hari</label>
+                    </div>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pelaku" role="tabpanel" aria-labelledby="pelaku-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Nama Pelaku Usaha </label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Jenis Usaha/Kegiatan</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Lokasi (Desa/Pulau)</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Luas Area Usaha/Kegiatan</label>
+                    <div class="col-sm-9">
+                      <input type="Number" class="form-control purchase-code" >
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="unitKerja" class="col-sm-3 col-form-label">Provinsi</label>
+                    <div class="col-sm-9">
+                      <select class="form-control selectric">
+                        <option>-- Pilih Provinsi --</option>
+                        <option>Unit Kerja 2</option>
+                        <option>Unit Kerja 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="kegiatan" role="tabpanel" aria-labelledby="kegiatan-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">RTR/ RZKAW/ RZKSNT/ RZWP3K</label>
+                    <div class="col-sm-9">
+                      <select class="form-control selectric" id="rtr" name="rz" >
+                        <option value="tidak"> Tidak Ada </option>
+                        <option value="ada"> Ada </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="form-ada">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control purchase-code" placeholder="input nomor RTR/RZ KAW/RZ KSNT">
+                      </div>
+                    </div>
+                  </div>
+                  <div id="form-tidak">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Dokumen Perizinan Berusaha</label>
+                    <div class="col-sm-9">
+                      <select class="form-control selectric" id="pk" name="kkprl" >
+                        <option value="1">Tidak Ada</option>
+                        <option value="2">Ada</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="form-sesuai1">
+                  </div>
+                  <div id="form-tidak1">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control purchase-code" placeholder="input nomor perizinan berusaha">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label"></label>
+                      <div class="col-sm-9">
+                        <select class="form-control selectric" id="izin" name="usaha" >
+                          <option value="22">Tidak Absah</option>
+                          <option value="11">Absah</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div id="form-absah11">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Kesesuaian Dokumen Perizinan Berusaha</label>
+                        <div class="col-sm-9">
+                          <select class="form-control selectric" id="kkprl" name="rtr" >
+                            <option value="3">Sesuai</option>
+                            <option value="4">Tidak Sesuai</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div id="form-sesuai2">
+                      </div>
+                      <div id="form-tidak2">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label"></label>
+                          <div class="col-sm-9">
+                            <select class="form-control selectric" >
+                              <option> Kesesuaian Dokumen Persetujuan/Konfirmasi KKPRL </option>
+                              <option> Kesesuaian Pengelolaan/Pelaksanaan</option>
+                              <option> Kesesuaian Kegiatan dengan Zonasi</option>
+                              <option> Penyampaian laporan pendirian dan/atau penempatan bangunan instalasi di laut</option>
+                              <option> Pemenuhan hak dan kewajiban pelaksanaan kegiatan Pemanfaatan Ruang Laut</option>
+                              <option> Penyampaian laporan tertulis secara berkala pelaksanaan kegiatan Pemanfaatan Ruang Laut</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label  class="col-sm-3 col-form-label"> </label>
+                          <div class="col-sm-9">
+                            <a class="btn btn-sm btn-outline-secondary" data-toggle="collapse" href="#collapseRtr" role="button" aria-expanded="false" aria-controls="collapseRtr">
+                              Tambah Ketidaksesuaian
+                            </a>
+                          </div>
+                        </div>
+                        <div class="collapse" id="collapseRtr">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9">
+                              <select class="form-control selectric" >
+                                <option> Kesesuaian Dokumen Persetujuan/Konfirmasi KKPRL </option>
+                                <option> Kesesuaian Pengelolaan/Pelaksanaan</option>
+                                <option> Kesesuaian Kegiatan dengan Zonasi</option>
+                                <option> Penyampaian laporan pendirian dan/atau penempatan bangunan instalasi di laut</option>
+                                <option> Pemenuhan hak dan kewajiban pelaksanaan kegiatan Pemanfaatan Ruang Laut</option>
+                                <option> Penyampaian laporan tertulis secara berkala pelaksanaan kegiatan Pemanfaatan Ruang Laut</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="form-tidak22">
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tambahan" role="tabpanel" aria-labelledby="tambahan-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Gambar</label>
+                    <div class="col-sm-7">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      .jpg/ .jpeg/ .png
+                      maksimal file 150Mb
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Video</label>
+                    <div class="col-sm-7">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      .mp4/ .avi/ .mkv
+                      maksimal file 250Mb
+                    </div>
+                  </div>
+                  <p>
+                    <a class="btn btn-sm btn-outline-secondary" data-toggle="collapse" href="#collapseDok" role="button" aria-expanded="false" aria-controls="collapseDok">
+                      Tambah Gambar/Video
+                    </a>
+                  </p>
+                  <div class="collapse" id="collapseDok">
+                    <div class="form-group row">
+                      <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Gambar</label>
+                      <div class="col-sm-7">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        .jpg/ .jpeg/ .png
+                        maksimal file 150Mb
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Pilih Video</label>
+                      <div class="col-sm-7">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        .mp4/ .avi/ .mkv
+                        maksimal file 250Mb
+                      </div>
+                    </div>
+                  </div>
+                  <div id="accordion">
+                    <div class="accordion">
+                      <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-2">
+                        <h4>Informasi/Keterangan dari Pihak Terkait</h4>
+                      </div>
+                      <div class="accordion-body collapse" id="panel-body-2" data-parent="#accordion">
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Sumber Informasi</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Pekerjaan/ Jabatan</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Jumlah Sumber Informasi</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Kesimpulan/Hasil Informasi</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Pengambilan Dokumentasi</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Analisis Dampak dan Prediksi</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Alternatif Penyelesaian/Penanggulangan</label>
+                          <div class="col-sm-9">
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion">
+                      <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-3">
+                        <h4>Pengambilan Sampel yang Diperlukan</h4>
+                      </div>
+                      <div class="accordion-body collapse" id="panel-body-3" data-parent="#accordion">
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Nama Pengambil Sampel</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">No. Sertifikat Pengambil Sampel</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Jenis Sampel yang Diambil</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="unitKerja" class="col-sm-3 col-form-label">Jumlah Titik Sampel</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control purchase-code">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="verifikasi" role="tabpanel" aria-labelledby="verifikasi-tab">
+                  <br>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Nama Unit Kegiatan/Usaha </label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Nama Penanggung Jawab </label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="nomorRegistrasi" class="col-sm-3 col-form-label">Jabatan</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control purchase-code">
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <label for="tanggal" class="col-sm-3 col-form-label">Tanda Tangan  </label>
+                      <div class="col-sm-6">
+                        <label>Penanggung Jawab Usaha/Kegiatan</label>
+                      <div id="root1" style="border: 1px solid gray"></div>
+                      </div>
+                  </div>
+                  <div class="buttons text-right">
+                    <a href="#" class="btn btn-icon icon-left btn-secondary"> Sebelumnya</a>
+                    <a href="#" class="btn btn-icon icon-left btn-warning"> Selanjutnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal fade" tabindex="-1" role="dialog" id="ModalPemberitahuan">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Notifikasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p>Data kehadiran petugas berhasil disimpan</p>
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/cleave-js/dist/cleave.min.js"></script>
+  <script src="assets/modules/cleave-js/dist/addons/cleave-phone.us.js"></script>
+  <script src="assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="assets/modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="assets/modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://lemonadejs.net/v2/lemonade.js"></script>
+  <script src="https://lemonadejs.net/v2/packages/signature/index.js"></script>
+  
+  <script>
+    var Component = function() {
+        var self = {
+            width: 400,
+            height: 200,
+            value: []
+        }
+     
+        var template = `
+            <div class="signature">
+                <Signature
+                    value="{{self.value}}"
+                    width="{{self.width}}"
+                    height="{{self.height}}"
+                    instructions="Please sign this document" />
+            </div>`;
+     
+        return lemonade.element(template, self, { Signature });
+    }
+    lemonade.render(Component, document.getElementById('root1'));
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#rtr').ready(function(){
+        var value=$('select[name=rz] option').filter(':selected').val();
+        console.log(value)
+        if(value == 'ada'){
+          console.log(value)
+          $("#form-ada").hide();
+          $("#form-tidak").show();
+        }else if(value == 'tidak'){
+          console.log(value)
+          $("#form-ada").hide();
+          $("#form-tidak").show();
+        }
+      });
+      $('#rtr').change(function(){
+        var value=$('select[name=rz] option').filter(':selected').val();
+        console.log(value)
+        if(value == 'ada'){
+          console.log(value)
+          $("#form-ada").show();
+          $("#form-tidak").hide();
+        }else if(value == 'tidak'){
+          console.log(value)
+          $("#form-ada").hide();
+          $("#form-tidak").show();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#pk').ready(function(){
+        var value=$('select[name=kkprl] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#form-sesuai1").show();
+          $("#form-tidak1").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#form-sesuai1").hide();
+          $("#form-tidak1").show();
+        }
+      });
+      $('#pk').change(function(){
+        var value=$('select[name=kkprl] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#form-sesuai1").show();
+          $("#form-tidak1").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#form-sesuai1").hide();
+          $("#form-tidak1").show();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#kkprl').ready(function(){
+        var value=$('select[name=rtr] option').filter(':selected').val();
+        console.log(value)
+        if(value == '3'){
+          console.log(value)
+          $("#form-sesuai2").show();
+          $("#form-tidak2").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#form-sesuai2").hide();
+          $("#form-tidak2").show();
+        }
+      });
+      $('#kkprl').change(function(){
+        var value=$('select[name=rtr] option').filter(':selected').val();
+        console.log(value)
+        if(value == '3'){
+          console.log(value)
+          $("#form-sesuai2").show();
+          $("#form-tidak2").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#form-sesuai2").hide();
+          $("#form-tidak2").show();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#izin').ready(function(){
+        var value=$('select[name=usaha] option').filter(':selected').val();
+        console.log(value)
+        if(value == '11'){
+          console.log(value)
+          $("#form-absah11").show();
+          $("#form-tidak22").hide();
+        }else if(value == '22'){
+          console.log(value)
+          $("#form-absah11").hide();
+          $("#form-tidak22").show();
+        }
+      });
+      $('#izin').change(function(){
+        var value=$('select[name=usaha] option').filter(':selected').val();
+        console.log(value)
+        if(value == '11'){
+          console.log(value)
+          $("#form-absah11").show();
+          $("#form-tidak22").hide();
+        }else if(value == '22'){
+          console.log(value)
+          $("#form-absah11").hide();
+          $("#form-tidak22").show();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

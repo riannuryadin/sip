@@ -17,6 +17,14 @@
   <link rel="stylesheet" href="../assets/modules/prism/prism.css">
   <link rel="stylesheet" href="../assets/modules/select2/dist/css/select2.min.css">
 
+  <!-- DataTables -->
+ <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+ <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+ <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+ <link rel="stylesheet" src="../plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css">
+ <link rel="stylesheet" src="../plugins/datatables-fixedcolumns/css/fixedColumns.bootstrap.min.css">
+ 
+
   <!-- Template CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
@@ -167,7 +175,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="card" style="border:1px solid #d3d3d3; border-radius: 5px;">
-                      <h6 class="m-3">Filter Data</h6>
+                      <h6 class="m-3">Pencarian Data</h6>
                         <div class="form-row m-3">
                             <div class="col col-sm">
                               <form>
@@ -206,7 +214,8 @@
                             </div>
                         </div>
                     <div class="table-responsive">
-                      <table class="table table-bordered table-md">
+                      <table id="data-operasi" class="table table-bordered table-md">
+                      <thead>
                         <tr>
                           <th>No.</th>
                           <th>Tangal Penugasan</th>
@@ -219,6 +228,8 @@
                           <th>Pelanggaran</th>
                           <th>Aksi</th>
                         </tr>
+                      </thead>
+                      <tbody>
                         <tr>
                           <td>1</td>
                           <td>22 Sep 2022 s/d 25 Sep 2022</td>
@@ -304,63 +315,15 @@
                             </div>
                           </td>
                         </tr>
+                      </tbody>
                       </table>
                     </div>
                     </div>
-                  <!-- <div class="card-footer text-right">
-                    <nav class="d-inline-block">
-                      <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div> -->
                 </div>
               </div>
             </div>
           </div>
         </section>
-      </div>
-      <div class="main-content">
-        <!-- Modal -->
-        <div class="modal fade" id="pilih-bap" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Jenis Berita Acara Hasil Pemeriksaan</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <div class="card-body">
-                    <select id="but-bap" name="buat-bap" class="select2" style="width:100%">
-                      <option value="sdp">Sumber Daya Perikanan</option>
-                      <option value="sdk">Sumber Daya Kelautan</option>
-                    </select>
-                  </div>
-                </div>
-              <div class="modal-footer">
-              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
-                <div id="bap-sdp">
-                <a href="bap_sdp.html" ><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
-                </div>
-                <div id="bap-sdk">
-                <a href="ba-patroli.html"><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <footer class="main-footer">
         <div class="footer-left">
@@ -372,6 +335,37 @@
       </footer>
     </div>
   </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pilih-bap" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Jenis Berita Acara Hasil Pemeriksaan</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="card-body">
+                <select id="but-bap" name="buat-bap" class="select2" style="width:100%">
+                  <option value="sdp">Sumber Daya Perikanan</option>
+                  <option value="sdk">Sumber Daya Kelautan</option>
+                </select>
+              </div>
+            </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
+            <div id="bap-sdp">
+            <a href="bap_sdp.html" ><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+            </div>
+            <div id="bap-sdk">
+            <a href="ba-patroli.html"><button type="button" class="btn btn-outline-danger">Isi Berita Acara</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- General JS Scripts -->
   <script src="../assets/modules/jquery.min.js"></script>
@@ -392,8 +386,40 @@
   <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
   <script src="../assets/modules/prism/prism.js"></script>
   <script src="../assets/modules/select2/dist/js/select2.full.min.js"></script>
-
-
+  <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="../plugins/datatables-fixedheader/js/fixedHeader.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-fixedcolumns/js/dataTables.fixedColumns.min.js"></script>
+<script src="../plugins/datatables-fixedcolumns/js/fixedColumns.bootstrap.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script>
+$(function () {
+  var table= $('#data-operasi').DataTable({
+    "paging": true,
+    "lengthChange": true,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "responsive":false,
+    "select": true,
+    "scrollY": "300px",
+    "scrollX": true,
+    "scrollCollapse": true,
+  });
+  new $.fn.dataTable.FixedHeader(table);
+});
+</script>
 
   <!-- JS Libraies -->
   <script src="../assets/modules/prism/prism.js"></script>

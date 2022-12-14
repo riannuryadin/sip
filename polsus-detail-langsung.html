@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Polsus</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl.perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="polsus-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengaduan.html"> Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="polsus-rekomendasi.html">Data Rekomendasi</a></li>
+                <li><a class="nav-link" href="polsus-penolakan.html">Data Penolakan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="polsus-pengawasan.html">Pengawasan baru</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-kkprl.html">Data Inspeksi KKRPL</a></li>
+                <li><a class="nav-link" href="polsus-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Detail Pengaduan/Laporan Masyarakat</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="polsus-pengaduan.html">Pengaduan</a></div>
+              <div class="breadcrumb-item">Pengaduan Baru</div>
+              <div class="breadcrumb-item">Detail Pengaduan</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Data Detail Pengaduan</h4>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pengaduan-tab" data-toggle="tab" href="#pengaduan" role="tab" aria-controls="pengaduan" aria-selected="true">Pengaduan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pelapor-tab" data-toggle="tab" href="#pelapor" role="tab" aria-controls="pelapor" aria-selected="false">Identitas Pelapor</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="petugas-tab" data-toggle="tab" href="#petugas" role="tab" aria-controls="petugas" aria-selected="false">Identitas Petugas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pelanggaran-tab" data-toggle="tab" href="#pelanggaran" role="tab" aria-controls="pelanggaran" aria-selected="false">Dugaan Pelanggaran</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pelaku-tab" data-toggle="tab" href="#pelaku" role="tab" aria-controls="pelaku" aria-selected="false">Pelaku Dugaan Pelanggaran</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="instansi-tab" data-toggle="tab" href="#instansi" role="tab" aria-controls="instansi" aria-selected="false">Laporan Instansi Lain</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="pengaduan" role="tabpanel" aria-labelledby="pengaduan-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nomor Registrasi</label>
+                        <div class="col-sm-9">
+                          : 001/PSDKP.3/POLSUSPWP3K/VII/2022
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Unit Kerja</label>
+                        <div class="col-sm-9">
+                          : UPT Pangkalan Jakarta 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Tanggal / Hari</label>
+                        <div class="col-sm-3">
+                          : 21 November 2022 
+                        </div>
+                        <div class="col-sm-3">
+                          / Senin
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-3">
+                          : 12.10
+                        </div>
+                        <div class="col-sm-3">
+                          / WITA
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Jenis Pengaduan</label>
+                        <div class="col-sm-9">
+                          <div class="badge badge-info">Langsung</div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label  class="col-sm-3 col-form-label">Download File Pengaduan</label>
+                        <div class="col-sm-9">
+                          <button class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-file"></i> Download PDF</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pelapor" role="tabpanel" aria-labelledby="pelapor-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Sumber Aduan</label>
+                        <div class="col-sm-3">
+                          : Perorangan
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Pelapor</label>
+                        <div class="col-sm-3">
+                          : Didit Eko Prasetyo
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">No. Telepon</label>
+                        <div class="col-sm-9">
+                          : 081920205959 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Alamat</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : Banten
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="petugas" role="tabpanel" aria-labelledby="petugas-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">NIP</label>
+                        <div class="col-sm-3">
+                          : 321893598364501
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-9">
+                          : Setyo Budhi Raharjo
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Jabatan</label>
+                        <div class="col-sm-3">
+                          : Polsus PWP3K
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Alamat Kantor</label>
+                        <div class="col-sm-6">
+                          : Jalan Muara Baru, RT 022/RW 017
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Penjaringan
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Jakarta Utara
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Kota Jakarta Utara
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : DKI Jakarta
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pelanggaran" role="tabpanel" aria-labelledby="pelanggaran-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Lokasi Kejadian</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : Banten
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Waktu kejadian</label>
+                        <div class="col-sm-9">
+                          : 24 Agustus 2022 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Hal yang dilaporkan</label>
+                        <div class="col-sm-9">
+                          : Pemanfaatan ruang yang tidak mematuhi ketentuan dalam kesesuaian kegiatan pemanfaatan ruang laut (pelanggaran jalur penggelaran kabel bawah laut)
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Dampak yang dirasakan akibat perusakan/pelanggaran </label>
+                        <div class="col-sm-9">
+                         : Biota laut menjadi rusak dan banyak ikan yang mati
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Bukti yang disampaikan</label>
+                        <div class="col-sm-9">
+                         : Foto - foto kerusakan biota laut dan ikan yang mati
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                          <div class="gallery gallery-md">
+                            <div class="gallery-item" data-image="assets/img/news/img03.jpg" data-title="Image 1"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img14.jpg" data-title="Image 2"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img08.jpg" data-title="Image 3"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img05.jpg" data-title="Image 4"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img11.jpg" data-title="Image 5"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img09.jpg" data-title="Image 6"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img12.jpg" data-title="Image 8"></div>
+                            <div class="gallery-item" data-image="assets/img/news/img13.jpg" data-title="Image 9"></div>
+                            <div class="gallery-item gallery-more" data-image="assets/img/news/img08.jpg" data-title="Image 12">
+                              <div>+2</div>
+                            </div>
+                            <div class="gallery-item gallery-hide" data-image="assets/img/news/img01.jpg" data-title="Image 4"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pelaku" role="tabpanel" aria-labelledby="pelaku-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Jenis Usaha/Kegiatan</label>
+                        <div class="col-sm-9">
+                          : Perusahaan 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Unit Usaha/Perseorangan</label>
+                        <div class="col-sm-9">
+                          : PT Titi Mangsa
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Penanggungjawab</label>
+                        <div class="col-sm-3">
+                          : 321893598364501
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">No. Telepon</label>
+                        <div class="col-sm-3">
+                          : 081208080890
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Alamat</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : Banten
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="instansi" role="tabpanel" aria-labelledby="instansi-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Instansi :</label>
+                        <div class="col-sm-3">
+                          : Kepolisian
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Tanggal Pelaporan :</label>
+                        <div class="col-sm-3">
+                          : 12 April 2022
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <div class="buttons">
+                    <a href="operator-pengaduan.html" class="btn btn-icon icon-left btn-secondary"> Kembali</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Preview Penerimaan Pengaduan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <img alt="image" src="assets/img/pengaduan.png" class="img-fluid">
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+  <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/components-table.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script><script>
+    $(document).ready(function(){
+      $('#jenis').ready(function(){
+        var value=$('select[name=kategori] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#1-form").show();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").show();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '3'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").show();
+          $("#4-form").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").show();
+        }
+      });
+      $('#jenis').change(function(){
+        var value=$('select[name=kategori] option').filter(':selected').val();
+        console.log(value)
+        if(value == '1'){
+          console.log(value)
+          $("#1-form").show();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '2'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").show();
+          $("#3-form").hide();
+          $("#4-form").hide();
+        }else if(value == '3'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").show();
+          $("#4-form").hide();
+        }else if(value == '4'){
+          console.log(value)
+          $("#1-form").hide();
+          $("#2-form").hide();
+          $("#3-form").hide();
+          $("#4-form").show();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

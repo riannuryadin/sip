@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Operator</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-perizinan.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl-izin.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="dashboard.html" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="operator-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengaduan.html">Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="operator-rekomendasi.html">Data Rekomendasi </a></li>
+                <li><a class="nav-link" href="operator-penolakan.html">Data Penolakan </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengawasan.html">Pengawasan Baru</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-kkprl.html">Data Inspeksi KKPRL</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Pengawasan/Inspeksi Lapangan</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="operator-surat-tugas.html">Pengawasan</a></div>
+              <div class="breadcrumb-item">Pengawasan Baru</div>
+              <div class="breadcrumb-item">Detail Surat Tugas</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data Surat Tugas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="petugas-tab" data-toggle="tab" href="#petugas" role="tab" aria-controls="petugas" aria-selected="false">Daftar Petugas</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Pemberi Tugas (Atasan Langsung) </label>
+                        <div class="col-sm-9">
+                          : Kepala Pangkalan UPT Jakarta
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Jenis Inspeksi</label>
+                        <div class="col-sm-3">
+                          : Rutin 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nomor P/K KKPRL</label>
+                        <div class="col-sm-9">
+                          : B-01/MEN-KP/I/2022 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
+                        <div class="col-sm-3">
+                          : 30 Maret 2022
+                        </div>
+                        <div class="col-sm-2">
+                          s/d
+                        </div>
+                        <div class="col-sm-3">
+                          31 Maret 2022
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Lokasi</label>
+                        <div class="col-sm-6">
+                          : Puri Pamulang, Jalan Puri Mawar 2 Blok D-1 No.10 RT/RW 003/005
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Pamulang Barat
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Pamulang
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Tangerang Selatan
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : Banten
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Preview Surat Tugas</label>
+                        <div class="col-sm-9">
+                          <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modalSurat"><i class="fas fa-file"></i> Download PDF</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="petugas" role="tabpanel" aria-labelledby="petugas-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-9">
+                          <h6>Daftar petugas inspeksi lapangan insidental</h6>
+                        </div>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table class="table table-striped table-md">
+                            <tr>
+                              <th>No</th>
+                              <th>NIP</th>
+                              <th>Nama Petugas</th>
+                              <th>Jabatan</th>
+                              <th>Instansi</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>32152891808456</td>
+                              <td>Hasan Basri</td>
+                              <td>Polsus</td>
+                              <td>Pangkalan UPT Jakarta</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>32152891808921</td>
+                              <td>Irwansyah Saputra</td>
+                              <td>Polsus</td>
+                              <td>Pangkalan UPT Jakarta</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>32152891808921</td>
+                              <td>Kusnadi</td>
+                              <td>Polsus</td>
+                              <td>Pangkalan UPT Jakarta</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <div class="buttons">
+                    <a href="polsus-pengawasan.html" class="btn btn-icon icon-left btn-secondary"> Kembali</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal fade" tabindex="-1" role="dialog" id="modalNotifikasi">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Notifikasi Rekomendasi Inspeksi Lapangan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p>Surat Tugas Inspeksi Lapangan Anda sudah terkirim</p>
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <a href="operator-pengawasan.html" class="btn btn-icon icon-left btn-secondary"></i> Ok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="modalSurat">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Preview Surat Tugas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <img alt="image" src="assets/img/surat-tugas.png" class="img-fluid">
+                  </div>
+                </a>
+
+              </div>
+              <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+  <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/components-table.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  
+</body>
+</html>

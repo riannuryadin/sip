@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>SIP &mdash; PSDKP</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/modules/weather-icon/css/weather-icons-wind.min.css">
+  <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/prism/prism.css">
+  <link rel="stylesheet" href="assets/modules/jquery-selectric/selectric.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Pemberitahuan
+                <div class="float-right">
+                  <a href="#">Belum Terbaca</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="penerimaan.html" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Perintah Telaah Pengaduan
+                    <div class="time text-warning">2 Menit berlalu</div>
+                  </div>
+                </a>
+                <a href="penolakan.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Persetujuan Penolakan Pengaduan
+                    <div class="time text-warning">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Insidental)
+                    <div class="time">Kemarin</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Inspeksi (Rutin)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas.html" class="dropdown-item">
+                  <div class="dropdown-item-icon badge-warning text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Pengawasan (Khusus)
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+                <a href="surat-tugas-patroli.html" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Surat Tugas Patroli
+                    <div class="time">2 Hari Berlalu</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hi, Operator</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="polsus-pengaduan.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Polsus
+              </a>
+              <a href="operator-izin-kkprl.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Operator
+              </a>
+              <a href="atasan-pengaduan" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Atasan Langsung
+              </a>
+              <a href="prl-izin.html" class="dropdown-item has-icon">
+                <i class="fas fa-fire"></i> Operator PRL
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="dashboard.html" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="dashboard.html">SIP - SDKP</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="dashboard.html">SIP</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu Utama</li>
+            <li class="dropdown">
+              <a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-th-large"></i> <span>Perizinan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-perusahaan.html">Data Perusahaan/Instansi</a></li>
+                <li><a class="nav-link" href="operator-perizinan.html">Data Perizinan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pengaduan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengaduan.html">Pengaduan Baru</a></li>
+                <li><a class="nav-link" href="operator-rekomendasi.html">Data Rekomendasi </a></li>
+                <li><a class="nav-link" href="operator-penolakan.html">Data Penolakan </a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-pencil-ruler"></i> <span>Pengawasan</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="operator-pengawasan.html">Pengawasan Baru</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-insidental.html">Data Inspeksi Insidental</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-kkprl.html">Data Inspeksi KKPRL</a></li>
+                <li><a class="nav-link" href="operator-inspeksi-khusus.html">Data Inspeksi Khusus</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Detail Perusahaan / Instansi</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item"><a href="operator-perusahaan.html">Perizinan</a></div>
+              <div class="breadcrumb-item">Perusahaan/Instansi</div>
+              <div class="breadcrumb-item">Detail Perusahaan/Instansi</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">
+                        Profile Perusahaan/Instansi
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="daftar-tab" data-toggle="tab" href="#daftar" role="tab" aria-controls="daftar" aria-selected="false">Daftar Perizinan </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Nama Pelaku Usaha</label>
+                        <div class="col-sm-9">
+                          : PT KUNCI MAS AGROMINA
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">NPWP</label>
+                        <div class="col-sm-3">
+                          : 31.541.165.2-611.000
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Alamat Kantor</label>
+                        <div class="col-sm-6">
+                          : Intiland Tower Office Suites Level 3, Jalan Panglima Sudirman
+                        </div>
+                        <div class="col-sm-3">
+                          /Kelurahan : Penjaringan
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-3">
+                          /Kecamatan : Utara
+                        </div>
+                        <div class="col-sm-3">
+                          /Kota : Kota Surabaya
+                        </div>
+                        <div class="col-sm-3">
+                          /Provinsi : Jawa TImur
+                        </div>
+                      </div>
+    
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">No. Telepon</label>
+                        <div class="col-sm-9">
+                          : 031-5940321 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="waktu" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                          : -
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Status Penanaman Modal</label>
+                        <div class="col-sm-9">
+                          : PMDN 
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Status Kepatuhan</label>
+                        <div class="col-sm-9">
+                          <div class="badge badge-info">Patuh</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="daftar" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="form-group row">
+                        <h4 class="col-sm-3"></h4>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-9">
+                          <h6>Daftar perizinan yang dimiliki perusahaan/instansi</h6>
+                        </div>
+                      </div>
+                      
+                      <div class="table-responsive">
+                        <table class="table table-striped table-md">
+                          <tr>
+                            <th>No</th>
+                            <th>Kode KBLI</th>
+                            <th>Kegiatan Usaha</th>
+                            <th>Jenis Perizinan</th>
+                            <th>Status Kepatuhan</th>
+                            <th>Detail Perizinan</th>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>36002</td>
+                            <td>Penampungan dan Penyaluran Air Baku</td>
+                            <td>P/K KKPRL</td>
+                            <td><div class="badge badge-warning">Belum Diawasi</div></td>
+                            <td><a href="detail-perizinan.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>36002</td>
+                            <td>Penampungan dan Penyaluran Air Baku</td>
+                            <td>Perizinan Berusaha</td>
+                            <td><div class="badge badge-info">Patuh</div></td>
+                            <td><a href="detail-perizinan.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>36002</td>
+                            <td>Penampungan dan Penyaluran Air Baku</td>
+                            <td>Perizinan Berusaha</td>
+                            <td><div class="badge badge-danger">Tidak Patuh</div></td>
+                            <td><a href="detail-perizinan.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-info-circle"></i> Lihat Detail</a></td>
+                          </tr>
+                          
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-right">
+                    <div class="buttons">
+                      <a href="operator-perusahaan.html" class="btn btn-icon icon-left btn-secondary"> Kembali</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://kkp.go.id/">Sekretariat Ditjen PSDKP</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="assets/modules/simple-weather/jquery.simpleWeather.min.js"></script>
+  <script src="assets/modules/chart.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="assets/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="assets/modules/summernote/summernote-bs4.js"></script>
+  <script src="assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="assets/modules/prism/prism.js"></script>
+  <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
+  <script src="assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/index-0.js"></script>
+  <script src="assets/js/page/components-table.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  
+</body>
+</html>
